@@ -488,6 +488,46 @@ h3 {
   padding: 1.5rem;
 }
 
+.lead-matter {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(14rem, 0.65fr);
+  gap: 1.25rem;
+  align-items: end;
+}
+
+.lead-matter-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.lead-matter-copy h2 {
+  max-width: 16ch;
+}
+
+.lead-matter-side {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.mini-stat {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.mini-stat-value {
+  font-family: var(--display);
+  font-size: 2.3rem;
+  line-height: 0.9;
+  color: var(--gold);
+}
+
+.mini-stat-label {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
 .split-grid,
 .two-column,
 .hero-grid,
@@ -819,6 +859,7 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lead-matter,
   .split-grid,
   .detail-layout,
   .digest-layout,

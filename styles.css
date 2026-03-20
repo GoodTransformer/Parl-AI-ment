@@ -514,6 +514,89 @@ h3 {
   justify-items: start;
 }
 
+.hero-aside-stack {
+  align-self: stretch;
+}
+
+.digest-preview {
+  background: linear-gradient(180deg, rgba(17, 28, 39, 0.98), rgba(12, 22, 31, 0.92));
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.35rem 1.35rem 1.2rem;
+}
+
+.digest-preview-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.95rem;
+  border-bottom: 1px solid rgba(201, 177, 136, 0.16);
+}
+
+.digest-preview-title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.digest-preview-subtitle {
+  margin: 0.28rem 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.digest-preview-block {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(201, 177, 136, 0.12);
+}
+
+.digest-preview-block:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0.65rem;
+}
+
+.digest-preview-kicker {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.digest-preview-copy {
+  margin: 0;
+  color: rgba(237, 242, 247, 0.92);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.digest-preview-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding-top: 0.95rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid rgba(201, 177, 136, 0.16);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.digest-preview-status span {
+  padding: 0.42rem 0.55rem;
+  border: 1px solid rgba(201, 177, 136, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.01);
+}
+
 .mini-stat {
   display: grid;
   gap: 0.3rem;

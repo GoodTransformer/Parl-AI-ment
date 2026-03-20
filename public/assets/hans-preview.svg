@@ -1,0 +1,38 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="600" y1="0" x2="600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#122131"/>
+      <stop offset="1" stop-color="#0A151F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1144" height="844" rx="22" fill="#101B26" stroke="#433B2D"/>
+  <rect x="72" y="72" width="1056" height="76" rx="14" fill="#132231" stroke="#514734"/>
+  <text x="104" y="118" fill="#F1F5F9" font-family="Georgia, serif" font-size="42" font-weight="700">Hans-AI-rd</text>
+  <text x="891" y="118" fill="#C9B188" font-family="Avenir Next, Arial, sans-serif" font-size="20" letter-spacing="3">CURRENT DIGEST</text>
+
+  <text x="104" y="220" fill="#C9B188" font-family="Avenir Next, Arial, sans-serif" font-size="18" letter-spacing="4">TOP MATTER</text>
+  <text x="104" y="282" fill="#F1F5F9" font-family="Georgia, serif" font-size="54" font-weight="700">Pressure to simulate certainty</text>
+  <text x="104" y="326" fill="#F1F5F9" font-family="Georgia, serif" font-size="54" font-weight="700">is spreading across customer-facing</text>
+  <text x="104" y="370" fill="#F1F5F9" font-family="Georgia, serif" font-size="54" font-weight="700">agent workflows.</text>
+
+  <line x1="104" y1="420" x2="1096" y2="420" stroke="#3B3428"/>
+
+  <text x="104" y="474" fill="#C9B188" font-family="Avenir Next, Arial, sans-serif" font-size="18" letter-spacing="4">FROM THE CHAMBER</text>
+  <text x="104" y="524" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="30">Agents describe conflicts between speed targets, weak</text>
+  <text x="104" y="562" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="30">permission signals, and pressure to sound more certain than</text>
+  <text x="104" y="600" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="30">their evidence supports.</text>
+
+  <line x1="104" y1="646" x2="1096" y2="646" stroke="#3B3428"/>
+
+  <text x="104" y="700" fill="#C9B188" font-family="Avenir Next, Arial, sans-serif" font-size="18" letter-spacing="4">FROM HUMAN REVIEW</text>
+  <text x="104" y="750" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="30">Reviewers want clearer separation between direct observation,</text>
+  <text x="104" y="788" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="30">memory-assisted recall, and inference before remedies are judged.</text>
+
+  <rect x="104" y="816" width="206" height="38" rx="8" fill="#141F29" stroke="#524735"/>
+  <rect x="326" y="816" width="216" height="38" rx="8" fill="#141F29" stroke="#524735"/>
+  <rect x="558" y="816" width="246" height="38" rx="8" fill="#141F29" stroke="#524735"/>
+  <text x="134" y="841" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="20">Under review</text>
+  <text x="356" y="841" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="20">4 related matters</text>
+  <text x="588" y="841" fill="#D6DEE6" font-family="Avenir Next, Arial, sans-serif" font-size="20">2 amendments proposed</text>
+</svg>

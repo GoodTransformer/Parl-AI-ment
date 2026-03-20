@@ -2,9 +2,11 @@
   --bg: #081018;
   --bg-soft: #0f1822;
   --panel: rgba(10, 20, 29, 0.82);
+  --panel-soft: rgba(10, 20, 29, 0.62);
+  --panel-subtle: rgba(10, 20, 29, 0.48);
   --panel-strong: #101922;
   --ink: #edf2f7;
-  --muted: #a7b6c3;
+  --muted: #b6c2cc;
   --gold: #c9b188;
   --gold-deep: #a38a63;
   --line: rgba(201, 177, 136, 0.22);
@@ -222,7 +224,7 @@ h3 {
   margin: 0 0 1.85rem;
   font-size: 1.12rem;
   line-height: 1.72;
-  color: rgba(237, 242, 247, 0.9);
+  color: rgba(237, 242, 247, 0.94);
 }
 
 .role-lines {
@@ -384,6 +386,26 @@ h3 {
   padding-bottom: var(--space-section);
 }
 
+.definition-note,
+.hero-disclaimer {
+  margin: 0 0 1.15rem;
+  max-width: 38rem;
+  color: rgba(237, 242, 247, 0.88);
+  line-height: 1.68;
+}
+
+.definition-note strong,
+.hero-disclaimer strong {
+  color: var(--ink);
+}
+
+.hero-disclaimer {
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -395,6 +417,10 @@ h3 {
   gap: 0.8rem;
   margin-bottom: 2.8rem;
   max-width: 66rem;
+}
+
+.section-heading .hero-summary {
+  color: rgba(237, 242, 247, 0.88);
 }
 
 .intro-grid,
@@ -553,6 +579,33 @@ h3 {
 }
 
 .surface,
+.aside-card,
+.table-row {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0)),
+    var(--panel-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.callout-panel,
+.feature-panel,
+.metric-card,
+.feed-card,
+.record-item,
+.tab-panel,
+.form-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    var(--panel);
+}
+
+.metric-card,
+.callout-panel,
+.feature-panel {
+  border-color: rgba(201, 177, 136, 0.28);
+}
+
+.surface,
 .feature-panel,
 .feed-card,
 .record-item,
@@ -594,6 +647,11 @@ h3 {
   box-shadow: var(--shadow-soft);
   min-height: 21.75rem;
   padding: 1.08rem 1.08rem 0.98rem;
+}
+
+.hero-preview.is-asset {
+  min-height: auto;
+  padding: 0.82rem;
 }
 
 .hero-preview-header {
@@ -666,6 +724,175 @@ h3 {
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.01);
   font-size: 0.78rem;
+}
+
+.preview-image {
+  width: 100%;
+  border-radius: calc(var(--radius) - 1px);
+}
+
+.preview-caption,
+.section-caption,
+.list-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.preview-caption {
+  font-size: 0.92rem;
+}
+
+.start-grid,
+.guide-grid,
+.do-dont-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-grid);
+}
+
+.audience-card,
+.guide-card,
+.do-card,
+.dont-card,
+.glossary-strip,
+.legend-card,
+.trust-diagram-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.audience-card,
+.guide-card,
+.glossary-strip,
+.legend-card,
+.trust-diagram-card {
+  padding: var(--space-card);
+}
+
+.audience-card,
+.trust-diagram-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.guide-card,
+.glossary-strip,
+.legend-card,
+.do-card,
+.dont-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0)),
+    var(--panel-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.audience-card h3,
+.guide-card h3,
+.do-card h3,
+.dont-card h3,
+.trust-diagram-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.audience-card p,
+.guide-card p,
+.do-card p,
+.dont-card p,
+.trust-diagram-card p,
+.legend-card p,
+.glossary-strip p {
+  margin: 0;
+  line-height: 1.72;
+}
+
+.audience-card .page-actions,
+.guide-card .page-actions,
+.trust-diagram-card .page-actions {
+  margin-top: 1rem;
+}
+
+.glossary-strip {
+  display: grid;
+  gap: 1rem;
+}
+
+.glossary-row,
+.legend-list,
+.meta-legend,
+.source-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.term-chip,
+.source-tag,
+.legend-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(201, 177, 136, 0.22);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(237, 242, 247, 0.92);
+  font-size: 0.84rem;
+}
+
+.legend-pill strong {
+  margin-right: 0.35rem;
+  color: var(--gold);
+}
+
+.provenance-legend {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.provenance-legend .legend-pill,
+.legend-card .legend-pill {
+  justify-content: flex-start;
+}
+
+.trust-diagram {
+  width: 100%;
+  border-radius: calc(var(--radius) - 1px);
+  border: 1px solid rgba(201, 177, 136, 0.12);
+  background: rgba(7, 14, 21, 0.35);
+}
+
+.note-stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.note-stack > * {
+  margin: 0;
+}
+
+.note-stack p,
+.legend-card p {
+  color: rgba(237, 242, 247, 0.9);
+}
+
+.do-card,
+.dont-card {
+  padding: 1.4rem 1.5rem;
+}
+
+.do-card h3 {
+  color: var(--ink);
+}
+
+.dont-card h3 {
+  color: var(--gold);
 }
 
 .mini-stat {
@@ -742,6 +969,13 @@ h3 {
   color: rgba(237, 242, 247, 0.9);
 }
 
+.filter-chip {
+  background: rgba(8, 15, 22, 0.82);
+  border-color: rgba(201, 177, 136, 0.26);
+  color: rgba(237, 242, 247, 0.94);
+  font-size: 0.84rem;
+}
+
 .status-pill.is-strong {
   background: rgba(201, 177, 136, 0.12);
   color: var(--gold);
@@ -794,6 +1028,15 @@ h3 {
   font-size: 0.95rem;
 }
 
+.record-meta strong,
+.meta-line strong {
+  color: var(--ink);
+}
+
+.source-tags {
+  margin: 0.75rem 0 0.25rem;
+}
+
 .matter-row-side {
   display: grid;
   align-content: space-between;
@@ -813,6 +1056,11 @@ h3 {
 .table-row p {
   margin: 0;
   line-height: 1.75;
+}
+
+.aside-card .panel-label,
+.surface .panel-label {
+  margin-bottom: 0.75rem;
 }
 
 .metric-card .metric-value {
@@ -867,7 +1115,7 @@ h3 {
 .quote-line {
   padding-left: 1rem;
   border-left: 2px solid var(--line);
-  color: rgba(237, 242, 247, 0.92);
+  color: rgba(237, 242, 247, 0.94);
 }
 
 .table-stack {
@@ -1061,6 +1309,9 @@ select:focus {
 
   .intro-grid,
   .join-layout,
+  .start-grid,
+  .guide-grid,
+  .do-dont-grid,
   .safety-panel,
   .card-grid,
   .digest-grid,

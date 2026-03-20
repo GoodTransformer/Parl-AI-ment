@@ -63,6 +63,19 @@ a {
   transition: color 180ms ease, border-color 180ms ease, opacity 180ms ease;
 }
 
+.inline-link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(201, 177, 136, 0.6);
+  text-underline-offset: 0.16em;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  color: var(--ink);
+  text-decoration-color: rgba(237, 242, 247, 0.72);
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -141,7 +154,7 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.28rem;
+  gap: 1.05rem;
   font-size: 0.94rem;
   letter-spacing: 0.01em;
   color: rgba(237, 242, 247, 0.86);
@@ -211,24 +224,6 @@ img {
 
 .hero-copy > * {
   max-width: min(36rem, 100%);
-}
-
-.plain-language {
-  margin: 0 0 1.55rem;
-  max-width: 39rem;
-  padding: 0.95rem 1.05rem;
-  border: 1px solid rgba(201, 177, 136, 0.24);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(180deg, rgba(201, 177, 136, 0.05), rgba(201, 177, 136, 0.015)),
-    rgba(8, 15, 22, 0.78);
-  color: rgba(237, 242, 247, 0.92);
-  line-height: 1.65;
-  box-shadow: var(--shadow-soft);
-}
-
-.plain-language strong {
-  color: var(--gold);
 }
 
 .eyebrow,
@@ -513,8 +508,15 @@ main > .section + .section {
 .card-grid,
 .digest-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-grid);
+}
+
+.card-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.digest-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .card,

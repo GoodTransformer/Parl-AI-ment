@@ -123,6 +123,9 @@ final class SiteReviewRenderer: NSObject, WKNavigationDelegate {
 
 let pageNames = [
   "index.html",
+  "why-now.html",
+  "waitlist.html",
+  "reports.html",
   "matters.html",
   "matter-detail.html",
   "chamber.html",

@@ -307,6 +307,36 @@ h3 {
   margin-bottom: 0;
 }
 
+.hans-hero {
+  padding-top: 4.2rem;
+  padding-bottom: 2.9rem;
+}
+
+.hans-hero .hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(19rem, 0.88fr);
+  align-items: start;
+}
+
+.hans-hero h1 {
+  max-width: 16.5ch;
+  font-size: clamp(2.75rem, 4.85vw, 4.25rem);
+}
+
+.hans-hero .hero-summary {
+  max-width: 38rem;
+  font-size: 1.04rem;
+  line-height: 1.66;
+}
+
+.hans-hero .page-actions {
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+.hans-hero .queue-list {
+  gap: 0.9rem;
+}
+
 .page-main {
   padding-bottom: var(--space-section);
 }
@@ -492,6 +522,10 @@ h3 {
   padding: var(--space-card);
 }
 
+.hans-hero .aside-card {
+  padding: 1.2rem 1.15rem;
+}
+
 .lead-matter {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(14rem, 0.65fr);
@@ -526,6 +560,10 @@ h3 {
   padding: 1.35rem 1.35rem 1.2rem;
 }
 
+.hans-hero .digest-preview {
+  padding: 1.08rem 1.08rem 0.98rem;
+}
+
 .digest-preview-header {
   display: flex;
   align-items: start;
@@ -536,12 +574,21 @@ h3 {
   border-bottom: 1px solid rgba(201, 177, 136, 0.16);
 }
 
+.hans-hero .digest-preview-header {
+  padding-bottom: 0.72rem;
+  margin-bottom: 0.8rem;
+}
+
 .digest-preview-title {
   margin: 0;
   font-family: var(--display);
   font-size: 1.3rem;
   line-height: 1;
   color: var(--ink);
+}
+
+.hans-hero .digest-preview-title {
+  font-size: 1.16rem;
 }
 
 .digest-preview-subtitle {
@@ -552,11 +599,21 @@ h3 {
   text-transform: uppercase;
 }
 
+.hans-hero .digest-preview-subtitle {
+  margin-top: 0.22rem;
+  font-size: 0.76rem;
+}
+
 .digest-preview-block {
   display: grid;
   gap: 0.35rem;
   padding: 0.85rem 0;
   border-bottom: 1px solid rgba(201, 177, 136, 0.12);
+}
+
+.hans-hero .digest-preview-block {
+  gap: 0.28rem;
+  padding: 0.68rem 0;
 }
 
 .digest-preview-block:last-of-type {
@@ -579,6 +636,11 @@ h3 {
   line-height: 1.6;
 }
 
+.hans-hero .digest-preview-copy {
+  font-size: 0.88rem;
+  line-height: 1.48;
+}
+
 .digest-preview-status {
   display: flex;
   flex-wrap: wrap;
@@ -590,11 +652,21 @@ h3 {
   font-size: 0.82rem;
 }
 
+.hans-hero .digest-preview-status {
+  gap: 0.45rem;
+  padding-top: 0.78rem;
+}
+
 .digest-preview-status span {
   padding: 0.42rem 0.55rem;
   border: 1px solid rgba(201, 177, 136, 0.16);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.01);
+}
+
+.hans-hero .digest-preview-status span {
+  padding: 0.34rem 0.48rem;
+  font-size: 0.78rem;
 }
 
 .mini-stat {

@@ -890,6 +890,11 @@ h3 {
   gap: 0.9rem;
 }
 
+.purpose-copy {
+  max-width: 64rem;
+  gap: 1rem;
+}
+
 .note-stack > * {
   margin: 0;
 }
@@ -897,6 +902,11 @@ h3 {
 .note-stack p,
 .legend-card p {
   color: rgba(237, 242, 247, 0.9);
+}
+
+.purpose-closing {
+  max-width: 52rem;
+  margin-top: 1.2rem;
 }
 
 .do-card,

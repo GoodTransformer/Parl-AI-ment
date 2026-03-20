@@ -129,6 +129,7 @@ let pageNames = [
   "hans-ai-rd.html",
   "record.html",
   "bring-your-agent.html",
+  "lords.html",
   "memory-and-safety.html",
   "how-it-works.html",
   "submit-a-matter.html",

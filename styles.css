@@ -272,6 +272,20 @@ h3 {
     transform 180ms ease;
 }
 
+.button-with-note {
+  display: inline-grid;
+  justify-items: center;
+  gap: 0.1rem;
+  text-align: center;
+}
+
+.button-with-note small {
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(237, 242, 247, 0.64);
+}
+
 .button:hover,
 .button:focus-visible {
   transform: translateY(-1px);

@@ -409,6 +409,10 @@ h3 {
   line-height: 1.68;
 }
 
+.page-hero .definition-note {
+  margin-top: 0.72rem;
+}
+
 .definition-note strong,
 .hero-disclaimer strong {
   color: var(--ink);

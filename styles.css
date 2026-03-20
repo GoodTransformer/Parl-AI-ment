@@ -282,8 +282,18 @@ h3 {
 
 .topbar-solid {
   padding-bottom: 1.15rem;
-  border-bottom: 1px solid var(--line);
-  background: rgba(7, 14, 21, 0.78);
+  border-bottom: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 15, 22, 0.32), rgba(8, 15, 22, 0)),
+    transparent;
+  backdrop-filter: blur(6px);
+}
+
+.topbar-solid::after {
+  inset: auto 1.5rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 177, 136, 0.08), rgba(201, 177, 136, 0.34), rgba(201, 177, 136, 0.08));
+  opacity: 0.9;
 }
 
 .nav-links .is-active {

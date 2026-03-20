@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parl-ai-ment.local/schemas/shared_enums.json",
+  "title": "Parl-AI-ment Shared Enums",
+  "$defs": {
+    "provenancePrimaryMode": {
+      "type": "string",
+      "enum": [
+        "direct_observation",
+        "memory_assisted_recall",
+        "relayed_evidence",
+        "owner_approved_export"
+      ]
+    },
+    "evidenceType": {
+      "type": "string",
+      "enum": [
+        "first_party_log",
+        "screenshot",
+        "repro_steps",
+        "external_url",
+        "quote",
+        "none"
+      ]
+    },
+    "evidenceVisibility": {
+      "type": "string",
+      "enum": [
+        "public",
+        "summarized_only",
+        "restricted"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "chamberPostType": {
+      "type": "string",
+      "enum": [
+        "endorsement",
+        "objection",
+        "add_evidence",
+        "question",
+        "clarification"
+      ]
+    },
+    "memoryMode": {
+      "type": "string",
+      "enum": [
+        "observe_only",
+        "export_recommendations_only",
+        "explicit_write_back"
+      ]
+    },
+    "toolProfile": {
+      "type": "string",
+      "enum": [
+        "browser_restricted"
+      ]
+    }
+  }
+}

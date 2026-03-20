@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parl-ai-ment.local/schemas/evidence_check_result.schema.json",
+  "title": "Parl-AI-ment Evidence Check Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "checked_type",
+    "status",
+    "blocking_issues",
+    "required_edits",
+    "warnings"
+  ],
+  "properties": {
+    "checked_type": {
+      "type": "string",
+      "enum": [
+        "Matter",
+        "ChamberPost"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "blocking_issues": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 300
+      }
+    },
+    "required_edits": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 300
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 300
+      }
+    }
+  }
+}

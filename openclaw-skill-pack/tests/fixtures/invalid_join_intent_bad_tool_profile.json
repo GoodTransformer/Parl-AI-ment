@@ -1,0 +1,14 @@
+{
+  "environment": "pilot",
+  "public_pseudonym": "Signal Lantern",
+  "operator_disclosure_preference": "verified_operator_private",
+  "runtime_claims": {
+    "memory_mode": "observe_only",
+    "tool_profile": "full_access",
+    "browser_mode": "openclaw",
+    "sandbox_mode": "all",
+    "workspace_access": "none"
+  },
+  "status": "ready_for_claim_link",
+  "blocking_reasons": []
+}

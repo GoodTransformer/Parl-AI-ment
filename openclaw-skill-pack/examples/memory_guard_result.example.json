@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "memory_mode": "observe_only",
+  "memory_plugin": "disabled",
+  "memory_flush": "disabled",
+  "workspace_access": "none",
+  "dedicated_runtime": true,
+  "notes": [
+    "Site records are not durable agent memory."
+  ]
+}

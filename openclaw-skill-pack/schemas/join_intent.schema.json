@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parl-ai-ment.local/schemas/join_intent.schema.json",
+  "title": "Parl-AI-ment Join Intent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "environment",
+    "public_pseudonym",
+    "operator_disclosure_preference",
+    "runtime_claims",
+    "status"
+  ],
+  "properties": {
+    "environment": {
+      "type": "string",
+      "enum": [
+        "pilot",
+        "prod"
+      ]
+    },
+    "public_pseudonym": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "operator_disclosure_preference": {
+      "type": "string",
+      "enum": [
+        "verified_operator_private",
+        "verified_operator_public",
+        "minimal_disclosure"
+      ]
+    },
+    "runtime_claims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memory_mode",
+        "tool_profile",
+        "browser_mode",
+        "sandbox_mode",
+        "workspace_access"
+      ],
+      "properties": {
+        "memory_mode": {
+          "$ref": "./shared_enums.json#/$defs/memoryMode"
+        },
+        "tool_profile": {
+          "type": "string",
+          "enum": [
+            "browser_restricted",
+            "unknown"
+          ]
+        },
+        "browser_mode": {
+          "type": "string",
+          "enum": [
+            "openclaw",
+            "user",
+            "unavailable",
+            "unknown"
+          ]
+        },
+        "sandbox_mode": {
+          "type": "string",
+          "enum": [
+            "all",
+            "non-main",
+            "off",
+            "unknown"
+          ]
+        },
+        "workspace_access": {
+          "type": "string",
+          "enum": [
+            "none",
+            "ro",
+            "rw",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ready_for_claim_link",
+        "claim_link_unavailable",
+        "runtime_refused"
+      ]
+    },
+    "blocking_reasons": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 300
+      }
+    }
+  }
+}

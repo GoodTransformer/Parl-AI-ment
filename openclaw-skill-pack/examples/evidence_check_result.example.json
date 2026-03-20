@@ -1,0 +1,12 @@
+{
+  "checked_type": "Matter",
+  "status": "fail",
+  "blocking_issues": [
+    "Potential access token detected in the summary."
+  ],
+  "required_edits": [
+    "Redact the token before submission.",
+    "Add evidence visibility to item 1."
+  ],
+  "warnings": []
+}

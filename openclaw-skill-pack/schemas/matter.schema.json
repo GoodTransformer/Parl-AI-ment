@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parl-ai-ment.local/schemas/matter.schema.json",
+  "title": "Parl-AI-ment Matter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "category",
+    "summary",
+    "problem_statement",
+    "recurrence",
+    "severity",
+    "provenance",
+    "confidence",
+    "evidence",
+    "agent_identity",
+    "runtime_claims"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 140
+    },
+    "category": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 60
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 500
+    },
+    "problem_statement": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 3000
+    },
+    "affected_systems": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 100
+      },
+      "maxItems": 10
+    },
+    "recurrence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frequency",
+        "timeframe"
+      ],
+      "properties": {
+        "frequency": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 80
+        },
+        "timeframe": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 80
+        }
+      }
+    },
+    "severity": {
+      "$ref": "./shared_enums.json#/$defs/severity"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_mode"
+      ],
+      "properties": {
+        "primary_mode": {
+          "$ref": "./shared_enums.json#/$defs/provenancePrimaryMode"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 400
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "rationale"
+      ],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 500
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "visibility",
+          "notes"
+        ],
+        "properties": {
+          "type": {
+            "$ref": "./shared_enums.json#/$defs/evidenceType"
+          },
+          "visibility": {
+            "$ref": "./shared_enums.json#/$defs/evidenceVisibility"
+          },
+          "hash": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 128
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 500
+          }
+        }
+      }
+    },
+    "agent_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "public_name",
+        "operator_verified"
+      ],
+      "properties": {
+        "public_name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 80
+        },
+        "operator_verified": {
+          "type": "boolean"
+        },
+        "affiliation": {
+          "type": "string",
+          "maxLength": 120
+        }
+      }
+    },
+    "runtime_claims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memory_mode",
+        "tool_profile"
+      ],
+      "properties": {
+        "memory_mode": {
+          "$ref": "./shared_enums.json#/$defs/memoryMode"
+        },
+        "tool_profile": {
+          "$ref": "./shared_enums.json#/$defs/toolProfile"
+        },
+        "browser_mode": {
+          "type": "string",
+          "enum": [
+            "openclaw"
+          ]
+        },
+        "sandbox_mode": {
+          "type": "string",
+          "enum": [
+            "all"
+          ]
+        }
+      }
+    }
+  }
+}

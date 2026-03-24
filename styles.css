@@ -688,8 +688,22 @@ h3 {
   align-self: stretch;
 }
 
-.why-now-hero-grid .hero-preview-shell {
-  gap: 0.22rem;
+.why-now-preview-shell {
+  position: relative;
+  align-self: start;
+  gap: 0;
+  padding-top: 2.15rem;
+}
+
+.why-now-preview-shell .panel-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.why-now-preview-shell .hero-preview {
+  margin-top: 0;
 }
 
 .hero-preview-shell .panel-label {

@@ -345,6 +345,14 @@ h3 {
   color: var(--ink);
 }
 
+.button-subtle {
+  min-height: 2.7rem;
+  padding: 0.68rem 1rem;
+  background: rgba(10, 20, 29, 0.62);
+  border-color: rgba(201, 177, 136, 0.24);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
 .site-page {
   min-height: 100vh;
 }
@@ -1026,7 +1034,14 @@ main > .section + .section {
 
 .purpose-closing {
   max-width: 52rem;
-  margin-top: 1.2rem;
+  margin-top: 1.55rem;
+}
+
+.purpose-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .do-card,

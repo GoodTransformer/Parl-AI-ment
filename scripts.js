@@ -14,25 +14,35 @@ if (main) {
   }
 }
 
+const createSiteStatus = (extraClass = "") => {
+  const status = document.createElement("div");
+  status.className = `site-status ${extraClass}`.trim();
+  status.innerHTML =
+    '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="waitlist.html#waitlist-form">1000 signups to build</a>';
+  return status;
+};
+
+const homepageFirstSection = document.querySelector("body:not(.site-page) main .section");
+
+if (homepageFirstSection && !document.querySelector("main > .site-status-home")) {
+  homepageFirstSection.insertAdjacentElement("beforebegin", createSiteStatus("site-status-home"));
+}
+
 document
-  .querySelectorAll(".hero-copy, .page-hero .hero-grid > div:first-child")
+  .querySelectorAll(".page-hero .hero-grid > div:first-child")
   .forEach((container) => {
     if (container.querySelector(".site-status")) {
       return;
     }
 
-    const anchor = container.querySelector(".section-kicker-row, .eyebrow, .section-kicker");
+    const anchor = container.querySelector(".section-kicker-row, .section-kicker");
 
     if (!anchor) {
       return;
     }
 
-    const status = document.createElement("div");
-    status.className = "site-status";
-    status.innerHTML =
-      '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="waitlist.html#waitlist-form">1000 signups to build</a>';
-    anchor.insertAdjacentElement("afterend", status);
-});
+    anchor.insertAdjacentElement("afterend", createSiteStatus());
+  });
 
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
 const navTermDefinitions = {

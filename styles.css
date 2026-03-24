@@ -235,6 +235,16 @@ img {
   line-height: 1.55;
 }
 
+.site-status-home {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-status-home .site-status-badge {
+  background: rgba(10, 20, 29, 0.68);
+}
+
 .site-status-badge {
   display: inline-flex;
   align-items: center;
@@ -1675,6 +1685,7 @@ button:disabled {
 
 @media (max-width: 560px) {
   .topbar,
+  .site-status-home,
   .section,
   .hero-copy {
     padding-left: 1rem;

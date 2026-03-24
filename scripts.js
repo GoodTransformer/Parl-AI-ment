@@ -32,29 +32,18 @@ const dedupeStatuses = (selector) => {
 };
 
 dedupeStatuses(".site-status-home");
+dedupeStatuses(".site-status-page");
 
-document
-  .querySelectorAll(".page-hero .hero-grid > div:first-child")
-  .forEach((container) => {
-    const existingStatuses = container.querySelectorAll(".site-status");
-    existingStatuses.forEach((status, index) => {
-      if (index > 0) {
-        status.remove();
-      }
-    });
+document.querySelectorAll(".page-hero .site-status").forEach((status) => status.remove());
 
-    if (container.querySelector(".site-status")) {
-      return;
-    }
+document.querySelectorAll("body.site-page .page-shell").forEach((pageShell) => {
+  const nextElement = pageShell.nextElementSibling;
+  if (nextElement?.classList.contains("site-status-page")) {
+    return;
+  }
 
-    const anchor = container.querySelector(".section-kicker-row, .section-kicker");
-
-    if (!anchor) {
-      return;
-    }
-
-    anchor.insertAdjacentElement("afterend", createSiteStatus());
-  });
+  pageShell.insertAdjacentElement("afterend", createSiteStatus("site-status-page"));
+});
 
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
 const navTermDefinitions = {

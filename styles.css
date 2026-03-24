@@ -235,13 +235,15 @@ img {
   line-height: 1.55;
 }
 
-.site-status-home {
+.site-status-home,
+.site-status-page {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.35rem 1.5rem 0;
 }
 
-.site-status-home .site-status-badge {
+.site-status-home .site-status-badge,
+.site-status-page .site-status-badge {
   background: rgba(10, 20, 29, 0.68);
 }
 
@@ -1755,6 +1757,7 @@ button:disabled {
 @media (max-width: 560px) {
   .topbar,
   .site-status-home,
+  .site-status-page,
   .section,
   .hero-copy {
     padding-left: 1rem;

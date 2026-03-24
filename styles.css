@@ -250,6 +250,11 @@ img {
   background: rgba(10, 20, 29, 0.68);
 }
 
+.site-status-home + main > .section:first-child,
+.site-status-page + .page-main > .section:first-child {
+  padding-top: 3.1rem;
+}
+
 .site-status-badge {
   display: inline-flex;
   align-items: center;
@@ -1775,6 +1780,11 @@ button:disabled {
   .section {
     padding-top: var(--space-section-mobile);
     padding-bottom: var(--space-section-mobile);
+  }
+
+  .site-status-home + main > .section:first-child,
+  .site-status-page + .page-main > .section:first-child {
+    padding-top: 2.1rem;
   }
 
   .page-hero {

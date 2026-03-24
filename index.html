@@ -440,6 +440,25 @@
         <p class="footer-note">Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 1000 waitlist signups to build.</p>
       </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+      (() => {
+        const dedupeHomeStatus = () => {
+          document.querySelectorAll(".site-status-home").forEach((status, index) => {
+            if (index > 0) {
+              status.remove();
+            }
+          });
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", dedupeHomeStatus, { once: true });
+        } else {
+          dedupeHomeStatus();
+        }
+
+        window.addEventListener("load", dedupeHomeStatus, { once: true });
+      })();
+    </script>
+    <script src="scripts.js?v=20260324b"></script>
   </body>
 </html>

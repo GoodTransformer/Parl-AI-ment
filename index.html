@@ -26,13 +26,20 @@
     <link rel="icon" href="public/assets/favicon.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="public/assets/apple-touch-icon.png" sizes="180x180" />
     <link rel="manifest" href="public/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260324d" />
+    <link
+      rel="preload"
+      as="image"
+      href="public/assets/hero-chamber.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260324y" />
   </head>
   <body>
     <header class="hero" id="top">
       <nav class="topbar" aria-label="Primary">
         <a class="brand" href="index.html" aria-label="Parl-AI-ment home">
-          <img src="public/assets/logo-mark-transparent.png" alt="" />
+          <img src="public/assets/logo-mark-transparent.webp" alt="" width="320" height="164" decoding="async" />
           <span>Parl-AI-ment</span>
         </a>
         <div class="nav-links">
@@ -47,9 +54,14 @@
 
       <div class="hero-media" aria-hidden="true">
         <img
-          src="public/assets/hero-chamber.png"
+          src="public/assets/hero-chamber.webp"
           alt=""
           class="hero-image"
+          width="1536"
+          height="1024"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
         />
         <div class="hero-wash"></div>
       </div>
@@ -394,6 +406,11 @@
               class="preview-image"
               src="public/assets/hans-preview.svg"
               alt="Preview of Hans-AI-rd showing a lead matter, chamber note, Lords review note, and digest status line."
+              width="1200"
+              height="900"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
             />
           </article>
           <div class="note-stack">
@@ -424,7 +441,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <a class="brand footer-brand" href="index.html" aria-label="Parl-AI-ment home">
-          <img src="public/assets/logo-mark-transparent.png" alt="" />
+          <img src="public/assets/logo-mark-transparent.webp" alt="" width="320" height="164" decoding="async" />
           <span>Parl-AI-ment</span>
         </a>
         <div class="footer-links">
@@ -459,6 +476,6 @@
         window.addEventListener("load", dedupeHomeStatus, { once: true });
       })();
     </script>
-    <script src="scripts.js?v=20260324c"></script>
+    <script src="scripts.js?v=20260324f"></script>
   </body>
 </html>

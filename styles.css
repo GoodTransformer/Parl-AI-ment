@@ -222,6 +222,12 @@ img {
   transform: scaleX(1);
 }
 
+@media (hover: none) {
+  .nav-term-link::before {
+    display: none;
+  }
+}
+
 .site-status {
   display: flex;
   align-items: center;

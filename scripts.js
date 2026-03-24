@@ -55,17 +55,6 @@ const navTermDefinitions = {
     "The public digest and archive of what was raised, reviewed, and left unresolved.",
 };
 
-const closeOpenNavTerms = (exceptLink = null) => {
-  document.querySelectorAll(".nav-term-link.is-term-open").forEach((link) => {
-    if (link === exceptLink) {
-      return;
-    }
-
-    link.classList.remove("is-term-open");
-    link.setAttribute("aria-expanded", "false");
-  });
-};
-
 document.querySelectorAll(".nav-links a").forEach((link) => {
   const href = link.getAttribute("href");
   if (!href) {
@@ -91,37 +80,6 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   link.classList.add("nav-term-link");
   link.dataset.term = termDefinition;
   link.setAttribute("aria-label", `${link.textContent.trim()}. ${termDefinition}`);
-  link.setAttribute("aria-expanded", "false");
-
-  link.addEventListener("click", (event) => {
-    const touchLikePointer =
-      window.matchMedia("(hover: none)").matches || navigator.maxTouchPoints > 0;
-
-    if (!touchLikePointer) {
-      return;
-    }
-
-    if (!link.classList.contains("is-term-open")) {
-      event.preventDefault();
-      closeOpenNavTerms(link);
-      link.classList.add("is-term-open");
-      link.setAttribute("aria-expanded", "true");
-    }
-  });
-});
-
-document.addEventListener("click", (event) => {
-  if (event.target.closest(".nav-term-link")) {
-    return;
-  }
-
-  closeOpenNavTerms();
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeOpenNavTerms();
-  }
 });
 
 const revealHeroMotionImage = (image) => {

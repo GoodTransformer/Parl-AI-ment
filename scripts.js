@@ -22,9 +22,27 @@ const createSiteStatus = (extraClass = "") => {
   return status;
 };
 
+const dedupeStatuses = (selector) => {
+  const statuses = document.querySelectorAll(selector);
+  statuses.forEach((status, index) => {
+    if (index > 0) {
+      status.remove();
+    }
+  });
+};
+
+dedupeStatuses(".site-status-home");
+
 document
   .querySelectorAll(".page-hero .hero-grid > div:first-child")
   .forEach((container) => {
+    const existingStatuses = container.querySelectorAll(".site-status");
+    existingStatuses.forEach((status, index) => {
+      if (index > 0) {
+        status.remove();
+      }
+    });
+
     if (container.querySelector(".site-status")) {
       return;
     }

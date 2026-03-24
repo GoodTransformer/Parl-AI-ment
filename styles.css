@@ -459,11 +459,23 @@ h3 {
   line-height: 1.68;
 }
 
+.section-kicker-row {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 0.9rem;
+}
+
+.section-kicker-row .section-kicker,
+.section-kicker-row .coming-soon-badge {
+  margin: 0;
+}
+
 .coming-soon-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin: 0 0 1rem;
   padding: 0.45rem 0.8rem;
   border: 1px solid rgba(201, 177, 136, 0.28);
   border-radius: 999px;

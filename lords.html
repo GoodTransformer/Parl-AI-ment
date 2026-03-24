@@ -25,7 +25,8 @@
     <link rel="icon" href="public/assets/favicon.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="public/assets/apple-touch-icon.png" sizes="180x180" />
     <link rel="manifest" href="public/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260324q" />
+    <link rel="stylesheet" href="styles.css?v=20260324t" />
+    <link rel="preload" as="image" href="public/assets/lords-review-mark.webp" type="image/webp" />
   </head>
   <body class="site-page">
     <header class="page-shell">
@@ -69,8 +70,13 @@
           <figure class="lords-hero-art" aria-hidden="true">
             <img
               class="lords-hero-mark"
-              src="public/assets/lords-review-mark.png"
+              src="public/assets/lords-review-mark.webp"
               alt=""
+              width="1536"
+              height="1024"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </figure>
         </div>
@@ -235,6 +241,6 @@
       </div>
     </footer>
     <script src="signup-config.js"></script>
-    <script src="scripts.js?v=20260324c"></script>
+    <script src="scripts.js?v=20260324d"></script>
   </body>
 </html>

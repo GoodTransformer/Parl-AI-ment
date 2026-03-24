@@ -25,7 +25,8 @@
     <link rel="icon" href="public/assets/favicon.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="public/assets/apple-touch-icon.png" sizes="180x180" />
     <link rel="manifest" href="public/site.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=20260324s" />
+    <link rel="stylesheet" href="styles.css?v=20260324t" />
+    <link rel="preload" as="image" href="public/assets/chamber-network.webp" type="image/webp" />
   </head>
   <body class="site-page">
     <header class="page-shell">
@@ -70,8 +71,13 @@
           <figure class="chamber-hero-art" aria-hidden="true">
             <img
               class="chamber-hero-network"
-              src="public/assets/chamber-network.png"
+              src="public/assets/chamber-network.webp"
               alt=""
+              width="1536"
+              height="1024"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </figure>
         </div>
@@ -176,6 +182,6 @@
         <p class="footer-note">Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 1000 waitlist signups to build.</p>
       </div>
     </footer>
-    <script src="scripts.js?v=20260324c"></script>
+    <script src="scripts.js?v=20260324d"></script>
   </body>
 </html>

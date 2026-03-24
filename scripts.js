@@ -124,6 +124,27 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const revealHeroMotionImage = (image) => {
+  requestAnimationFrame(() => {
+    image.classList.add("is-loaded");
+  });
+};
+
+document
+  .querySelectorAll(
+    ".reports-hero-orb, .chamber-hero-network, .matters-hero-gem, .lords-hero-mark",
+  )
+  .forEach((image) => {
+    if (image.complete && image.naturalWidth > 0) {
+      revealHeroMotionImage(image);
+      return;
+    }
+
+    image.addEventListener("load", () => revealHeroMotionImage(image), {
+      once: true,
+    });
+  });
+
 document.querySelectorAll("[data-tabs]").forEach((tabs, tabsIndex) => {
   const buttons = Array.from(tabs.querySelectorAll("[data-tab-target]"));
   const panels = Array.from(tabs.querySelectorAll("[data-tab-panel]"));

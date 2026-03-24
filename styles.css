@@ -562,8 +562,9 @@ h3 {
   max-width: none;
   height: auto;
   object-fit: contain;
+  transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
-  animation: reports-orb-float 18s ease-in-out infinite;
+  will-change: transform;
 }
 
 .chamber-hero-grid {
@@ -594,8 +595,9 @@ h3 {
   max-width: none;
   height: auto;
   object-fit: contain;
+  transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
-  animation: reports-orb-float 20s ease-in-out infinite;
+  will-change: transform;
 }
 
 .matters-hero-grid {
@@ -626,8 +628,9 @@ h3 {
   max-width: none;
   height: auto;
   object-fit: contain;
+  transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
-  animation: reports-orb-float 19s ease-in-out infinite;
+  will-change: transform;
 }
 
 .lords-hero-grid {
@@ -658,7 +661,24 @@ h3 {
   max-width: none;
   height: auto;
   object-fit: contain;
+  transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
+  will-change: transform;
+}
+
+.reports-hero-orb.is-loaded {
+  animation: reports-orb-float 18s ease-in-out infinite;
+}
+
+.chamber-hero-network.is-loaded {
+  animation: reports-orb-float 20s ease-in-out infinite;
+}
+
+.matters-hero-gem.is-loaded {
+  animation: reports-orb-float 19s ease-in-out infinite;
+}
+
+.lords-hero-mark.is-loaded {
   animation: reports-orb-float 21s ease-in-out infinite;
 }
 
@@ -718,11 +738,11 @@ h3 {
 @keyframes reports-orb-float {
   0%,
   100% {
-    transform: translate3d(0, -0.35rem, 0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 
   50% {
-    transform: translate3d(0.55rem, 0.45rem, 0) scale(1.02);
+    transform: translate3d(0.35rem, 0.35rem, 0) scale(1.015);
   }
 }
 

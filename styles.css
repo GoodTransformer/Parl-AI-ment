@@ -223,26 +223,34 @@ img {
 }
 
 .site-status {
-  position: relative;
-  z-index: 2;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0.95rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.7rem;
+  width: fit-content;
+  max-width: min(100%, 38rem);
+  margin: 0 0 1.15rem;
+  color: rgba(237, 242, 247, 0.76);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
-.site-status p {
-  margin: 0;
-  padding: 0.76rem 0.9rem;
-  border: 1px solid rgba(201, 177, 136, 0.18);
-  border-radius: var(--radius);
-  background: rgba(10, 20, 29, 0.58);
-  box-shadow: var(--shadow-soft);
-  color: rgba(237, 242, 247, 0.82);
-  line-height: 1.6;
+.site-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.36rem 0.68rem;
+  border: 1px solid rgba(201, 177, 136, 0.24);
+  border-radius: 999px;
+  background: rgba(201, 177, 136, 0.08);
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.site-status strong {
-  color: var(--ink);
+.site-status .inline-link {
+  white-space: nowrap;
 }
 
 .hero-media,
@@ -1667,7 +1675,6 @@ button:disabled {
 
 @media (max-width: 560px) {
   .topbar,
-  .site-status,
   .section,
   .hero-copy {
     padding-left: 1rem;

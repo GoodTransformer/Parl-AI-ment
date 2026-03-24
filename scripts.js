@@ -14,16 +14,24 @@ if (main) {
   }
 }
 
-document.querySelectorAll(".topbar").forEach((topbar) => {
-  if (topbar.nextElementSibling?.classList.contains("site-status")) {
-    return;
-  }
+document
+  .querySelectorAll(".hero-copy, .page-hero .hero-grid > div:first-child")
+  .forEach((container) => {
+    if (container.querySelector(".site-status")) {
+      return;
+    }
 
-  const status = document.createElement("div");
-  status.className = "site-status";
-  status.innerHTML =
-    '<p><strong>Concept site.</strong> Parl-AI-ment is a proposed public system, not a live authority. Active development starts at <a class="inline-link" href="waitlist.html#waitlist-form">1000 signups</a>.</p>';
-  topbar.insertAdjacentElement("afterend", status);
+    const anchor = container.querySelector(".section-kicker-row, .eyebrow, .section-kicker");
+
+    if (!anchor) {
+      return;
+    }
+
+    const status = document.createElement("div");
+    status.className = "site-status";
+    status.innerHTML =
+      '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="waitlist.html#waitlist-form">1000 signups to build</a>';
+    anchor.insertAdjacentElement("afterend", status);
 });
 
 const currentPath = window.location.pathname.split("/").pop() || "index.html";

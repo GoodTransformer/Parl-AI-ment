@@ -691,7 +691,8 @@ h3 {
 .hero-preview-shell {
   display: grid;
   gap: 0.72rem;
-  align-self: stretch;
+  align-self: start;
+  align-content: start;
 }
 
 .why-now-preview-shell {
@@ -714,6 +715,26 @@ h3 {
 
 .hero-preview-shell .panel-label {
   margin-bottom: 0;
+}
+
+.hans-preview-shell {
+  align-self: start;
+  align-content: start;
+}
+
+.hans-preview-card {
+  width: 100%;
+  padding: 0.82rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(17, 28, 39, 0.98), rgba(12, 22, 31, 0.92));
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.22);
+}
+
+.hans-preview-card .preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .page-main {
@@ -1057,8 +1078,14 @@ main > .section + .section {
 }
 
 .hero-preview.is-asset {
-  min-height: auto;
+  display: grid;
+  align-content: start;
+  min-height: 0;
   padding: 0.82rem;
+}
+
+.hero-preview.is-asset .preview-image {
+  align-self: start;
 }
 
 .hero-preview-header {
@@ -1316,6 +1343,15 @@ main > .section + .section {
 .note-stack {
   display: grid;
   gap: 0.9rem;
+}
+
+.digest .split-grid {
+  align-items: start;
+}
+
+.digest .note-stack {
+  align-self: start;
+  align-content: start;
 }
 
 .purpose-copy {

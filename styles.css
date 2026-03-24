@@ -165,6 +165,31 @@ img {
   padding: 0.12rem 0 0.42rem;
 }
 
+.nav-term-link::before {
+  content: attr(data-term);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 0.9rem);
+  width: min(17rem, 58vw);
+  padding: 0.7rem 0.82rem;
+  border: 1px solid rgba(201, 177, 136, 0.28);
+  border-radius: var(--radius);
+  background: rgba(6, 14, 20, 0.96);
+  box-shadow: var(--shadow-soft);
+  color: rgba(237, 242, 247, 0.92);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 0.3rem);
+  transition: opacity 180ms ease, transform 180ms ease;
+  z-index: 12;
+}
+
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -184,10 +209,40 @@ img {
   color: var(--ink);
 }
 
+.nav-term-link:hover::before,
+.nav-term-link:focus-visible::before,
+.nav-term-link.is-term-open::before {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after {
   opacity: 0.58;
   transform: scaleX(1);
+}
+
+.site-status {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.95rem 1.5rem 0;
+}
+
+.site-status p {
+  margin: 0;
+  padding: 0.76rem 0.9rem;
+  border: 1px solid rgba(201, 177, 136, 0.18);
+  border-radius: var(--radius);
+  background: rgba(10, 20, 29, 0.58);
+  box-shadow: var(--shadow-soft);
+  color: rgba(237, 242, 247, 0.82);
+  line-height: 1.6;
+}
+
+.site-status strong {
+  color: var(--ink);
 }
 
 .hero-media,
@@ -1564,6 +1619,18 @@ button:disabled {
     gap: 0.9rem 1.15rem;
   }
 
+  .nav-term-link::before {
+    left: 0;
+    width: min(18rem, 78vw);
+    transform: translateY(0.3rem);
+  }
+
+  .nav-term-link:hover::before,
+  .nav-term-link:focus-visible::before,
+  .nav-term-link.is-term-open::before {
+    transform: translateY(0);
+  }
+
   .hero-copy {
     min-height: auto;
     padding-top: 5.5rem;
@@ -1600,6 +1667,7 @@ button:disabled {
 
 @media (max-width: 560px) {
   .topbar,
+  .site-status,
   .section,
   .hero-copy {
     padding-left: 1rem;

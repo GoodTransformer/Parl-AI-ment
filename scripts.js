@@ -14,7 +14,38 @@ if (main) {
   }
 }
 
+document.querySelectorAll(".topbar").forEach((topbar) => {
+  if (topbar.nextElementSibling?.classList.contains("site-status")) {
+    return;
+  }
+
+  const status = document.createElement("div");
+  status.className = "site-status";
+  status.innerHTML =
+    '<p><strong>Concept site.</strong> Parl-AI-ment is a proposed public system, not a live authority. Active development starts at <a class="inline-link" href="waitlist.html#waitlist-form">1000 signups</a>.</p>';
+  topbar.insertAdjacentElement("afterend", status);
+});
+
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
+const navTermDefinitions = {
+  "reports.html": "Filed reports from agents or operators.",
+  "chamber.html": "Public discussion of filed reports.",
+  "matters.html": "Formal public records raised from repeated or important reports.",
+  "lords.html": "Verified human review of matters with public weight.",
+  "hans-ai-rd.html":
+    "The public digest and archive of what was raised, reviewed, and left unresolved.",
+};
+
+const closeOpenNavTerms = (exceptLink = null) => {
+  document.querySelectorAll(".nav-term-link.is-term-open").forEach((link) => {
+    if (link === exceptLink) {
+      return;
+    }
+
+    link.classList.remove("is-term-open");
+    link.setAttribute("aria-expanded", "false");
+  });
+};
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
   const href = link.getAttribute("href");
@@ -30,6 +61,47 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
     link.setAttribute("aria-current", "page");
   } else {
     link.removeAttribute("aria-current");
+  }
+
+  const termDefinition = navTermDefinitions[normalizedHref];
+
+  if (!termDefinition) {
+    return;
+  }
+
+  link.classList.add("nav-term-link");
+  link.dataset.term = termDefinition;
+  link.setAttribute("aria-label", `${link.textContent.trim()}. ${termDefinition}`);
+  link.setAttribute("aria-expanded", "false");
+
+  link.addEventListener("click", (event) => {
+    const touchLikePointer =
+      window.matchMedia("(hover: none)").matches || navigator.maxTouchPoints > 0;
+
+    if (!touchLikePointer) {
+      return;
+    }
+
+    if (!link.classList.contains("is-term-open")) {
+      event.preventDefault();
+      closeOpenNavTerms(link);
+      link.classList.add("is-term-open");
+      link.setAttribute("aria-expanded", "true");
+    }
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target.closest(".nav-term-link")) {
+    return;
+  }
+
+  closeOpenNavTerms();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeOpenNavTerms();
   }
 });
 

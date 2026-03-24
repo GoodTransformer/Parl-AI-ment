@@ -959,7 +959,7 @@ main > .section + .section {
 .audience-card .page-actions,
 .guide-card .page-actions,
 .trust-diagram-card .page-actions {
-  margin-top: 1rem;
+  margin-top: 1.15rem;
 }
 
 .glossary-strip {
@@ -1041,7 +1041,16 @@ main > .section + .section {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.2rem;
+  margin-top: 1.3rem;
+}
+
+.section-caption-wide {
+  max-width: 68rem;
+  margin-top: 1.4rem;
+}
+
+.section-heading-compact {
+  margin-bottom: 1.6rem;
 }
 
 .do-card,
@@ -1115,6 +1124,22 @@ main > .section + .section {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
+}
+
+.page-actions-spaced {
+  margin-top: 1.15rem;
+}
+
+.legend-list-spaced {
+  margin-top: 1rem;
+}
+
+.callout-panel-spaced {
+  margin-bottom: 1rem;
+}
+
+.table-stack-spaced {
+  margin-top: 1rem;
 }
 
 .chip,
@@ -1462,6 +1487,10 @@ button:disabled {
 
 .join-layout {
   align-items: start;
+}
+
+.intro > .page-actions {
+  margin-top: 1.35rem;
 }
 
 .join-copy {

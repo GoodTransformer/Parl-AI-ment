@@ -237,9 +237,12 @@ img {
 
 .site-status-home,
 .site-status-page {
+  width: min(100%, var(--max-width));
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.35rem 1.5rem 0;
+  justify-content: center;
+  text-align: center;
 }
 
 .site-status-home .site-status-badge,

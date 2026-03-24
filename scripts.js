@@ -195,7 +195,11 @@ document.querySelectorAll("[data-tabs]").forEach((tabs, tabsIndex) => {
   }
 });
 
-const signupEndpoint = window.PARL_SIGNUP_ENDPOINT?.trim();
+const signupEndpoints = {
+  default: window.PARL_SIGNUP_ENDPOINT?.trim(),
+  waitlist: window.PARL_SIGNUP_ENDPOINT?.trim(),
+  "lords-volunteer": window.PARL_LORDS_SIGNUP_ENDPOINT?.trim() || window.PARL_SIGNUP_ENDPOINT?.trim(),
+};
 
 document.querySelectorAll("[data-signup-form]").forEach((form) => {
   const submitButton = form.querySelector('button[type="submit"]');
@@ -225,6 +229,8 @@ document.querySelectorAll("[data-signup-form]").forEach((form) => {
     if (!form.reportValidity()) {
       return;
     }
+
+    const signupEndpoint = signupEndpoints[source] || signupEndpoints.default;
 
     if (!signupEndpoint) {
       setStatus("Signup is not configured yet. Add your live form endpoint in signup-config.js.", "error");

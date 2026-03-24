@@ -20,7 +20,7 @@ After pushing to `main`, enable Pages in the repository settings and choose `Git
 
 The Pages artifact publishes the site pages, shared assets, and the `openclaw-skill-pack` docs linked from the site. Working files such as vision docs and local inspiration assets are not included in the deployed artifact.
 
-GitHub Pages will host the static site, but any live form capture still needs an external backend. Most forms remain concept mockups; the waitlist and Lords volunteer forms can be connected to a live endpoint via `signup-config.js`.
+GitHub Pages will host the static site, but any live form capture still needs an external backend. Most forms remain concept mockups; the waitlist and Lords volunteer forms can be connected to live endpoints via `signup-config.js`.
 
 ## Working signups
 
@@ -28,11 +28,12 @@ GitHub Pages is static, so live signup capture needs an external form backend.
 
 The repo now includes a shared signup flow for `waitlist.html` and `lords.html`. To make it live:
 
-1. Create one form endpoint in Formspree.
-2. Paste the endpoint into `signup-config.js`.
-3. Push to `main`.
+1. Create your Formspree form endpoints.
+2. Paste the waitlist endpoint into `window.PARL_SIGNUP_ENDPOINT` in `signup-config.js`.
+3. Paste the Lords volunteer endpoint into `window.PARL_LORDS_SIGNUP_ENDPOINT` in `signup-config.js`.
+4. Push to `main`.
 
-Both signup pages submit to the same endpoint and include a `signup_type` field so you can tell whether each submission came from the waitlist or The Lords volunteer page.
+`waitlist.html` submits to the main signup endpoint and `lords.html` can submit to its own dedicated endpoint. Both forms also include a `signup_type` field so you can still identify the source of each submission.
 
 ## Included assets
 

@@ -22,12 +22,6 @@ const createSiteStatus = (extraClass = "") => {
   return status;
 };
 
-const homepageFirstSection = document.querySelector("body:not(.site-page) main .section");
-
-if (homepageFirstSection && !document.querySelector("main > .site-status-home")) {
-  homepageFirstSection.insertAdjacentElement("beforebegin", createSiteStatus("site-status-home"));
-}
-
 document
   .querySelectorAll(".page-hero .hero-grid > div:first-child")
   .forEach((container) => {

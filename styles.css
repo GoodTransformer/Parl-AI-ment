@@ -238,7 +238,7 @@ img {
 .site-status-home {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 1.35rem 1.5rem 0;
 }
 
 .site-status-home .site-status-badge {

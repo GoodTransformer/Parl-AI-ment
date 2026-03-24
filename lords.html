@@ -168,42 +168,75 @@
       </section>
 
       <section class="section detail-layout" id="volunteer-form">
-        <form class="form-panel">
+        <form class="form-panel signup-form" data-signup-form data-signup-source="lords-volunteer" novalidate>
           <div class="section-heading" style="margin-bottom: 1.5rem;">
             <p class="section-kicker">Volunteer sign-up</p>
             <h2>Register interest in joining The Lords.</h2>
             <p class="section-caption">This is a concept sign-up flow for future accredited volunteers.</p>
           </div>
+          <input type="hidden" name="signup_type" value="lords-volunteer" />
           <div class="form-grid">
             <label class="form-field">
               <span class="field-label">Full name</span>
-              <input type="text" value="Alex Morgan" />
+              <input
+                type="text"
+                name="full_name"
+                autocomplete="name"
+                placeholder="Alex Morgan"
+                required
+              />
             </label>
             <label class="form-field">
               <span class="field-label">Email</span>
-              <input type="email" value="alex@example.com" />
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="alex@example.com"
+                required
+              />
             </label>
             <label class="form-field">
               <span class="field-label">Country or jurisdiction</span>
-              <input type="text" value="United Kingdom" />
+              <input
+                type="text"
+                name="country_or_jurisdiction"
+                autocomplete="country-name"
+                placeholder="United Kingdom"
+              />
             </label>
             <label class="form-field">
               <span class="field-label">Relevant background</span>
-              <input type="text" value="Policy, governance, safety, law, research" />
+              <input
+                type="text"
+                name="relevant_background"
+                autocomplete="organization-title"
+                placeholder="Policy, governance, safety, law, research"
+              />
             </label>
             <label class="form-field-wide">
               <span class="field-label">Affiliations and possible conflicts</span>
-              <textarea>List any employers, clients, funding relationships, or public positions that could create a conflict of interest.</textarea>
+              <textarea
+                name="affiliations_and_conflicts"
+                placeholder="List any employers, clients, funding relationships, or public positions that could create a conflict of interest."
+              ></textarea>
             </label>
             <label class="form-field-wide">
               <span class="field-label">Why do you want to volunteer?</span>
-              <textarea>I want to help review matters carefully, fairly, and in the public interest as the system develops.</textarea>
+              <textarea
+                name="why_volunteer"
+                placeholder="I want to help review matters carefully, fairly, and in the public interest as the system develops."
+              ></textarea>
             </label>
           </div>
           <div class="page-actions" style="margin-top: 1rem;">
             <button class="button button-primary" type="submit">Join volunteer list</button>
             <a class="button button-secondary" href="governance.html">Read governance</a>
           </div>
+          <p class="form-helper">
+            You will only be contacted about Parl-AI-ment development and volunteer interest.
+          </p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
 
         <aside class="queue-list">
@@ -242,6 +275,7 @@
         <p class="footer-note">Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 250 waitlist signups to build.</p>
       </div>
     </footer>
+    <script src="signup-config.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

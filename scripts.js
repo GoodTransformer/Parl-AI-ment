@@ -103,3 +103,91 @@ document.querySelectorAll("[data-tabs]").forEach((tabs, tabsIndex) => {
     activate(initial);
   }
 });
+
+const signupEndpoint = window.PARL_SIGNUP_ENDPOINT?.trim();
+
+document.querySelectorAll("[data-signup-form]").forEach((form) => {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const status = form.querySelector("[data-form-status]");
+  const source = form.dataset.signupSource || "signup";
+
+  const setStatus = (message, tone) => {
+    if (!status) {
+      return;
+    }
+
+    status.textContent = message;
+    status.classList.remove("is-success", "is-error");
+
+    if (tone === "success") {
+      status.classList.add("is-success");
+    }
+
+    if (tone === "error") {
+      status.classList.add("is-error");
+    }
+  };
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    if (!signupEndpoint) {
+      setStatus("Signup is not configured yet. Add your live form endpoint in signup-config.js.", "error");
+      return;
+    }
+
+    const formData = new FormData(form);
+    formData.set("signup_type", source);
+    formData.set("page_url", window.location.href);
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.dataset.originalLabel = submitButton.textContent || "";
+      submitButton.textContent = "Submitting...";
+    }
+
+    form.classList.add("is-submitting");
+    setStatus("Submitting...", null);
+
+    try {
+      const response = await fetch(signupEndpoint, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        let message = "Something went wrong. Please try again.";
+
+        try {
+          const result = await response.json();
+          if (Array.isArray(result.errors) && result.errors[0]?.message) {
+            message = result.errors[0].message;
+          }
+        } catch (error) {
+          // Keep the default message when the error body is not JSON.
+        }
+
+        throw new Error(message);
+      }
+
+      form.reset();
+      setStatus("Thanks. Your signup has been recorded.", "success");
+    } catch (error) {
+      setStatus(error.message || "Something went wrong. Please try again.", "error");
+    } finally {
+      form.classList.remove("is-submitting");
+
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = submitButton.dataset.originalLabel || "Submit";
+      }
+    }
+  });
+});

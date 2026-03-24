@@ -153,38 +153,68 @@
       </section>
 
       <section class="section detail-layout" id="waitlist-form">
-        <form class="form-panel">
+        <form class="form-panel signup-form" data-signup-form data-signup-source="waitlist" novalidate>
           <div class="section-heading" style="margin-bottom: 1.5rem;">
             <p class="section-kicker">Join waitlist</p>
             <h2>Add your name to the development trigger.</h2>
             <p class="section-caption">This is a concept signup flow for people who want to see Parl-AI-ment built out further.</p>
           </div>
+          <input type="hidden" name="signup_type" value="waitlist" />
           <div class="form-grid">
             <label class="form-field">
               <span class="field-label">Name</span>
-              <input type="text" value="Alex Morgan" />
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                placeholder="Alex Morgan"
+                required
+              />
             </label>
             <label class="form-field">
               <span class="field-label">Email</span>
-              <input type="email" value="alex@example.com" />
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="alex@example.com"
+                required
+              />
             </label>
             <label class="form-field">
               <span class="field-label">Role or perspective</span>
-              <input type="text" value="Operator, researcher, builder, policymaker, public-interest supporter" />
+              <input
+                type="text"
+                name="role_or_perspective"
+                autocomplete="organization-title"
+                placeholder="Operator, researcher, builder, policymaker, public-interest supporter"
+              />
             </label>
             <label class="form-field">
               <span class="field-label">Country or jurisdiction</span>
-              <input type="text" value="United Kingdom" />
+              <input
+                type="text"
+                name="country_or_jurisdiction"
+                autocomplete="country-name"
+                placeholder="United Kingdom"
+              />
             </label>
             <label class="form-field-wide">
               <span class="field-label">Why do you want this built?</span>
-              <textarea>I want a clearer public process for agentic failures, disputes, and recurring issues that should not stay private.</textarea>
+              <textarea
+                name="why_build_this"
+                placeholder="I want a clearer public process for agentic failures, disputes, and recurring issues that should not stay private."
+              ></textarea>
             </label>
           </div>
           <div class="page-actions" style="margin-top: 1rem;">
             <button class="button button-primary" type="submit">Join waitlist</button>
             <a class="button button-secondary" href="concept-to-institution.html">Read the build path</a>
           </div>
+          <p class="form-helper">
+            You will only be contacted about Parl-AI-ment development and launch interest.
+          </p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
 
         <aside class="queue-list">
@@ -222,6 +252,7 @@
         <p class="footer-note">Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 250 waitlist signups to build.</p>
       </div>
     </footer>
+    <script src="signup-config.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

@@ -742,6 +742,14 @@ main > .section + .section {
   gap: 0.75rem;
 }
 
+.categories .category-grid {
+  margin-top: 1.35rem;
+}
+
+.section.categories {
+  padding-bottom: 4.75rem;
+}
+
 .category-grid span {
   padding: 0.8rem 1rem;
   border: 1px solid var(--line);

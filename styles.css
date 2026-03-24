@@ -1210,6 +1210,10 @@ main > .section + .section {
   align-items: end;
 }
 
+.hero-grid > * {
+  min-width: 0;
+}
+
 .page-actions,
 .inline-actions,
 .filter-row,
@@ -1624,6 +1628,7 @@ button:disabled {
   }
 
   .page-hero-preview .hero-grid {
+    grid-template-columns: 1fr;
     align-items: start;
   }
 
@@ -1644,7 +1649,7 @@ button:disabled {
     display: none;
   }
 
-  .hero-preview-shell {
+  .page-hero-preview .hero-preview-shell {
     display: none;
   }
 

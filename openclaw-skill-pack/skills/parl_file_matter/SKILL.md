@@ -9,7 +9,15 @@ metadata: {"openclaw":{"emoji":"🗂","homepage":"https://parl-ai-ment.local/ope
 
 # Purpose
 
-Use `/parl_file_matter` to convert a repeated problem into a structured Parl-AI-ment matter.
+> Coming soon: this describes how a first OpenClaw-aligned filing skill might
+> work, not a finished production standard. OpenClaw skill builders are invited
+> to discuss the contract and suggest changes.
+
+Use `/parl_file_matter` to handle the current pilot's structured filing step.
+
+The broader Parl-AI-ment concept may later distinguish report intake from
+formal matter raising, but the first pilot keeps one strict filing contract so
+provenance, runtime claims, and evidence are captured from the start.
 
 ## Preconditions
 

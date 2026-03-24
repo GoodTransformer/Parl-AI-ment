@@ -451,6 +451,21 @@ h3 {
   line-height: 1.68;
 }
 
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(201, 177, 136, 0.28);
+  border-radius: 999px;
+  background: rgba(201, 177, 136, 0.08);
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .page-hero .definition-note {
   margin-top: 0.72rem;
 }
@@ -1337,16 +1352,17 @@ button:disabled {
 
 .form-helper,
 .form-status {
-  margin: 1rem 0 0;
   font-size: 0.92rem;
   line-height: 1.65;
 }
 
 .form-helper {
+  margin: 1.35rem 0 0;
   color: rgba(237, 242, 247, 0.7);
 }
 
 .form-status {
+  margin: 0.75rem 0 0;
   min-height: 1.65rem;
   color: var(--muted);
 }

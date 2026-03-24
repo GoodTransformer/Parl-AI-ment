@@ -287,9 +287,9 @@ img {
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: right center;
-  filter: brightness(1.26) contrast(1.06) saturate(1.06);
+  filter: brightness(1.22) contrast(1.05) saturate(1.05);
 }
 
 .hero-wash {

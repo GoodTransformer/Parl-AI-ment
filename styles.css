@@ -1642,6 +1642,10 @@ button:disabled {
     display: none;
   }
 
+  .hero-preview-shell {
+    display: none;
+  }
+
   .topbar {
     align-items: start;
     flex-direction: column;
@@ -1670,12 +1674,22 @@ button:disabled {
     padding-bottom: 4.5rem;
   }
 
+  .page-hero-preview {
+    padding-bottom: 2.35rem;
+  }
+
+  .page-hero-preview .hero-summary {
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
   .intro-grid,
   .join-layout,
   .start-grid,
   .guide-grid,
   .do-dont-grid,
   .quick-grid,
+  .metric-grid,
   .safety-panel,
   .card-grid,
   .digest-grid,
@@ -1691,6 +1705,46 @@ button:disabled {
   .matter-row-side {
     justify-items: start;
     min-width: 0;
+  }
+
+  .filter-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .legend-list,
+  .meta-legend,
+  .source-tags,
+  .tab-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .filter-chip {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .legend-pill,
+  .term-chip,
+  .source-tag {
+    min-height: auto;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .site-status {
+    gap: 0.35rem 0.55rem;
+    font-size: 0.86rem;
+  }
+
+  .site-status .inline-link {
+    white-space: normal;
   }
 
   h1 {
@@ -1727,6 +1781,27 @@ button:disabled {
 
   h1 {
     font-size: clamp(2.55rem, 13vw, 3.8rem);
+  }
+
+  .surface,
+  .matter-row,
+  .feature-panel,
+  .feed-card,
+  .record-item,
+  .form-panel,
+  .aside-card,
+  .tab-panel,
+  .callout-panel,
+  .metric-card,
+  .table-row {
+    padding: 1.25rem;
+  }
+
+  .chip,
+  .filter-chip,
+  .status-pill {
+    min-height: auto;
+    padding: 0.62rem 0.8rem;
   }
 
   .button {

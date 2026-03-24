@@ -1633,6 +1633,13 @@ button:disabled {
 @media (max-width: 800px) {
   .hero {
     min-height: auto;
+    background:
+      radial-gradient(circle at top, rgba(45, 70, 90, 0.24), transparent 34%),
+      linear-gradient(180deg, #061018 0%, #08131d 52%, #0c1721 100%);
+  }
+
+  .hero .hero-media {
+    display: none;
   }
 
   .topbar {

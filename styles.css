@@ -1681,6 +1681,10 @@ button:disabled {
   color: rgba(237, 242, 247, 0.7);
 }
 
+.page-actions + .form-helper {
+  margin-top: 0.7rem;
+}
+
 .form-status {
   margin: 0.75rem 0 0;
   min-height: 1.65rem;

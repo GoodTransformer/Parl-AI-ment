@@ -333,6 +333,10 @@ img {
   max-width: min(40rem, 100%);
 }
 
+.hero-copy h1 + .hero-summary {
+  margin-top: 0.35rem;
+}
+
 .hero-copy > :not(h1) {
   max-width: min(36rem, 100%);
 }

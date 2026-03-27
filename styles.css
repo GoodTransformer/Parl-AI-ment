@@ -1994,7 +1994,7 @@ button:disabled {
 }
 
 .launch-article-figure {
-  margin: 0 0 2.25rem;
+  margin: 1.35rem 0 2.4rem;
 }
 
 .launch-article-media {
@@ -2018,8 +2018,8 @@ button:disabled {
 .launch-article-image {
   display: block;
   width: 100%;
-  height: clamp(240px, 30vw, 390px);
-  max-height: 390px;
+  height: clamp(220px, 27vw, 350px);
+  max-height: 350px;
   object-fit: cover;
   object-position: center 54%;
 }
@@ -2705,7 +2705,7 @@ button:disabled {
   }
 
   .launch-article-figure {
-    margin-bottom: 2rem;
+    margin: 1.15rem 0 2rem;
   }
 
   .launch-article-media {
@@ -2713,8 +2713,8 @@ button:disabled {
   }
 
   .launch-article-image {
-    height: min(260px, 58vw);
-    max-height: 260px;
+    height: min(234px, 52vw);
+    max-height: 234px;
     object-position: center 50%;
   }
 

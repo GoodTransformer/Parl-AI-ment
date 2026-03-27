@@ -1977,6 +1977,13 @@ button.concept-locked-control,
 
 .launch-blog-page .topbar {
   max-width: var(--max-width);
+  padding-left: 1.35rem;
+  padding-right: 1.5rem;
+}
+
+.launch-blog-page .topbar::after {
+  left: 1.35rem;
+  right: 1.5rem;
 }
 
 .launch-blog-page .nav-links {

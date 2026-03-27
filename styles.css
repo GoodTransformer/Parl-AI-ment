@@ -2090,6 +2090,11 @@ button.concept-locked-control,
   white-space: nowrap;
 }
 
+.launch-title-line {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .launch-standfirst {
   max-width: var(--launch-standfirst-measure);
   margin: 1.95rem 0 0;
@@ -2125,6 +2130,15 @@ button.concept-locked-control,
 
 .launch-heading-nowrap {
   max-width: none;
+}
+
+@media (min-width: 780px) {
+  .launch-heading-nowrap {
+    white-space: nowrap;
+    font-size: clamp(1.42rem, 1.8vw, 1.78rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
 }
 
 .launch-article p {
@@ -2510,9 +2524,6 @@ button.concept-locked-control,
     line-height: 0.93;
   }
 
-  .launch-heading-nowrap {
-    white-space: nowrap;
-  }
 }
 
 @keyframes launch-cover-reveal {

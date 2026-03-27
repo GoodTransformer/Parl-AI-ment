@@ -1926,7 +1926,7 @@ button:disabled {
 }
 
 .article-shell {
-  padding-top: clamp(1.4rem, 3vw, 2.1rem);
+  padding-top: clamp(0.35rem, 0.8vw, 0.6rem);
 }
 
 .launch-article {
@@ -1935,7 +1935,7 @@ button:disabled {
 }
 
 .launch-masthead {
-  padding: clamp(1.8rem, 4vw, 2.9rem) 0 clamp(2.1rem, 4.5vw, 3.3rem);
+  padding: clamp(1.8rem, 4vw, 2.9rem) 0 clamp(0.85rem, 1.8vw, 1.05rem);
 }
 
 .launch-masthead-inner {
@@ -1994,23 +1994,42 @@ button:disabled {
 }
 
 .launch-article-figure {
-  margin: 0 0 2rem;
+  margin: 0 0 2.25rem;
+}
+
+.launch-article-media {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(19, 33, 44, 0.12);
-  border-radius: 20px;
-  background:
-    radial-gradient(circle at 68% 42%, rgba(245, 205, 113, 0.16), transparent 18%),
-    linear-gradient(180deg, #081018 0%, #101b25 100%);
-  box-shadow: 0 28px 64px rgba(6, 13, 21, 0.16);
+  border-radius: 12px;
+  background: #0d1822;
+  box-shadow: 0 14px 30px rgba(6, 13, 21, 0.1);
+}
+
+.launch-article-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .launch-article-image {
   display: block;
   width: 100%;
-  height: clamp(240px, 34vw, 420px);
-  max-height: 420px;
+  height: clamp(240px, 30vw, 390px);
+  max-height: 390px;
   object-fit: cover;
   object-position: center 54%;
+}
+
+.launch-article-caption {
+  margin: 0.78rem 0 0;
+  color: rgba(19, 33, 44, 0.54);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
 }
 
 .launch-issue-list {
@@ -2686,14 +2705,22 @@ button:disabled {
   }
 
   .launch-article-figure {
-    margin-bottom: 1.6rem;
-    border-radius: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .launch-article-media {
+    border-radius: 10px;
   }
 
   .launch-article-image {
     height: min(260px, 58vw);
     max-height: 260px;
     object-position: center 50%;
+  }
+
+  .launch-article-caption {
+    margin-top: 0.72rem;
+    font-size: 0.74rem;
   }
 
   .chamber-hero-network {

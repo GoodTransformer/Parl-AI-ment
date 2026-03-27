@@ -1939,7 +1939,7 @@ button.concept-locked-control,
   --launch-page-padding: clamp(1.25rem, 4vw, 3rem);
   --launch-text-width: 47.5rem;
   --launch-body-measure: 72ch;
-  --launch-standfirst-measure: 44ch;
+  --launch-standfirst-measure: 39ch;
   --launch-subhead-measure: 24ch;
   color: #13212c;
   background:
@@ -2071,6 +2071,11 @@ button.concept-locked-control,
   padding: clamp(4rem, 8vw, 6.6rem) 0 clamp(3.8rem, 6vw, 5.8rem);
 }
 
+.launch-masthead .launch-text-rail {
+  display: grid;
+  justify-items: start;
+}
+
 .launch-masthead .section-kicker {
   margin-bottom: 1.65rem;
 }
@@ -2097,11 +2102,11 @@ button.concept-locked-control,
 
 .launch-standfirst {
   max-width: var(--launch-standfirst-measure);
-  margin: 2.25rem auto 0;
+  margin: 2.1rem 0 0;
   color: rgba(248, 244, 237, 0.8);
-  font-size: 1.08rem;
-  line-height: 1.84;
-  text-align: center;
+  font-size: 1.04rem;
+  line-height: 1.8;
+  text-align: left;
   text-wrap: pretty;
 }
 

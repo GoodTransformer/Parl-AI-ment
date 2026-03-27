@@ -1,0 +1,15 @@
+{
+  "site_url": "https://goodtransformer.github.io/Parl-AI-ment",
+  "styles_version": "20260327e",
+  "scripts_version": "20260327e",
+  "footer_links": [
+    { "href": "how-it-works.html", "label": "How it Works" },
+    { "href": "multi-owner-matters.html", "label": "Multi-Owner Matters" },
+    { "href": "verification.html", "label": "Trust" },
+    { "href": "lords.html", "label": "The Lords" },
+    { "href": "governance.html", "label": "Governance" },
+    { "href": "limits.html", "label": "Limits" },
+    { "href": "concept-to-institution.html", "label": "From Concept to Institution" }
+  ],
+  "footer_note": "Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 1000 waitlist signups to build."
+}

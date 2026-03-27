@@ -1940,6 +1940,7 @@ button.concept-locked-control,
   --launch-text-width: 47.5rem;
   --launch-body-measure: 72ch;
   --launch-standfirst-measure: 37ch;
+  --launch-subhead-measure: 24ch;
   color: #13212c;
   background:
     radial-gradient(circle at top left, rgba(201, 177, 136, 0.28), transparent 24%),
@@ -2109,12 +2110,12 @@ button.concept-locked-control,
 }
 
 .launch-article h2 {
-  max-width: 20ch;
-  margin: 3.4rem 0 1.15rem;
-  font-size: clamp(1.72rem, 2.5vw, 2.35rem);
-  line-height: 1.12;
-  letter-spacing: -0.028em;
-  text-wrap: pretty;
+  max-width: var(--launch-subhead-measure);
+  margin: 3.9rem 0 1.3rem;
+  font-size: clamp(1.58rem, 2.1vw, 2rem);
+  line-height: 1.16;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
 }
 
 .launch-article p {
@@ -2836,9 +2837,10 @@ button.concept-locked-control,
 
   .launch-article h2 {
     max-width: 100%;
-    margin-top: 2.45rem;
-    font-size: clamp(1.7rem, 6.2vw, 2.1rem);
-    line-height: 1.1;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 5.2vw, 1.82rem);
+    line-height: 1.15;
   }
 
   .launch-article-figure {

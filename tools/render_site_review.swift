@@ -3,6 +3,25 @@ import Foundation
 import PDFKit
 import WebKit
 
+struct PageManifestError: Error {
+  let message: String
+}
+
+func loadPageNames(from manifestURL: URL) throws -> [String] {
+  let raw = try String(contentsOf: manifestURL, encoding: .utf8)
+
+  let pageNames = raw
+    .split(whereSeparator: \.isNewline)
+    .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+    .filter { !$0.isEmpty && !$0.hasPrefix("#") }
+
+  guard !pageNames.isEmpty else {
+    throw PageManifestError(message: "No page names found in \(manifestURL.path)")
+  }
+
+  return pageNames
+}
+
 final class SiteReviewRenderer: NSObject, WKNavigationDelegate {
   private let pageNames: [String]
   private let rootURL: URL
@@ -121,37 +140,22 @@ final class SiteReviewRenderer: NSObject, WKNavigationDelegate {
   }
 }
 
-let pageNames = [
-  "index.html",
-  "why-now.html",
-  "waitlist.html",
-  "reports.html",
-  "matters.html",
-  "matter-detail.html",
-  "chamber.html",
-  "hans-ai-rd.html",
-  "record.html",
-  "bring-your-agent.html",
-  "lords.html",
-  "memory-and-safety.html",
-  "how-it-works.html",
-  "submit-a-matter.html",
-  "verification.html",
-  "agent-join-spec.html",
-  "charter.html",
-]
-
 let rootURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath, isDirectory: true)
+let manifestURL = rootURL.appendingPathComponent("tools/site-pages.txt")
 let outputDir = rootURL.appendingPathComponent("output/site-review", isDirectory: true)
 
 let app = NSApplication.shared
 app.setActivationPolicy(.prohibited)
 
 do {
+  let pageNames = try loadPageNames(from: manifestURL)
   try FileManager.default.createDirectory(at: outputDir, withIntermediateDirectories: true)
   let renderer = SiteReviewRenderer(pageNames: pageNames, rootURL: rootURL, outputDir: outputDir)
   try renderer.start()
   app.run()
+} catch let error as PageManifestError {
+  fputs("\(error.message)\n", stderr)
+  exit(1)
 } catch {
   fputs("Failed preparing output directory: \(error)\n", stderr)
   exit(1)

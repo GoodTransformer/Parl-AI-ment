@@ -184,6 +184,79 @@ const enhancePrimaryNav = () => {
   });
 };
 
+const initMobileNav = () => {
+  const topbar = document.querySelector(".home-page .topbar");
+  const toggle = topbar?.querySelector(".nav-toggle");
+  const menu = topbar?.querySelector(".nav-links");
+
+  if (!topbar || !toggle || !menu) {
+    return;
+  }
+
+  topbar.classList.add("has-mobile-nav");
+
+  const mobileQuery = window.matchMedia("(max-width: 800px)");
+
+  const closeMenu = () => {
+    topbar.classList.remove("is-menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("has-open-menu");
+  };
+
+  const openMenu = () => {
+    topbar.classList.add("is-menu-open");
+    toggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("has-open-menu");
+  };
+
+  const syncMenuState = () => {
+    if (!mobileQuery.matches) {
+      closeMenu();
+    }
+  };
+
+  toggle.addEventListener("click", () => {
+    if (topbar.classList.contains("is-menu-open")) {
+      closeMenu();
+      return;
+    }
+
+    openMenu();
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileQuery.matches) {
+        closeMenu();
+      }
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!mobileQuery.matches || !topbar.classList.contains("is-menu-open")) {
+      return;
+    }
+
+    if (!topbar.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  if (typeof mobileQuery.addEventListener === "function") {
+    mobileQuery.addEventListener("change", syncMenuState);
+  } else {
+    mobileQuery.addListener(syncMenuState);
+  }
+
+  syncMenuState();
+};
+
 const revealHeroMotionImage = (image) => {
   requestAnimationFrame(() => {
     image.classList.add("is-loaded");
@@ -534,6 +607,7 @@ const initSignupForms = () => {
 ensureMainSkipLink();
 syncSiteStatuses();
 enhancePrimaryNav();
+initMobileNav();
 initHeroMotionImages();
 initTabs();
 initConceptGuards();

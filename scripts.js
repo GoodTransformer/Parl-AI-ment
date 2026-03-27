@@ -177,6 +177,7 @@ document.querySelectorAll("[data-tabs]").forEach((tabs, tabsIndex) => {
 const signupEndpoints = {
   default: window.PARL_SIGNUP_ENDPOINT?.trim(),
   waitlist: window.PARL_SIGNUP_ENDPOINT?.trim(),
+  "launch-blog": window.PARL_SIGNUP_ENDPOINT?.trim(),
   "lords-volunteer": window.PARL_LORDS_SIGNUP_ENDPOINT?.trim() || window.PARL_SIGNUP_ENDPOINT?.trim(),
 };
 

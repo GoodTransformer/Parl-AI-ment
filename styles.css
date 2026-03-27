@@ -1939,7 +1939,7 @@ button.concept-locked-control,
   --launch-page-padding: clamp(1.25rem, 4vw, 3rem);
   --launch-text-width: 47.5rem;
   --launch-body-measure: 72ch;
-  --launch-standfirst-measure: 37ch;
+  --launch-standfirst-measure: 44ch;
   --launch-subhead-measure: 24ch;
   color: #13212c;
   background:
@@ -2085,12 +2085,17 @@ button.concept-locked-control,
   text-wrap: balance;
 }
 
+.launch-title-lockup {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .launch-standfirst {
   max-width: var(--launch-standfirst-measure);
   margin: 1.95rem 0 0;
   color: rgba(248, 244, 237, 0.8);
   font-size: 1.06rem;
-  line-height: 1.82;
+  line-height: 1.78;
   text-wrap: pretty;
 }
 
@@ -2116,6 +2121,10 @@ button.concept-locked-control,
   line-height: 1.16;
   letter-spacing: -0.022em;
   text-wrap: balance;
+}
+
+.launch-heading-nowrap {
+  max-width: none;
 }
 
 .launch-article p {
@@ -2499,6 +2508,10 @@ button.concept-locked-control,
     max-width: 18ch;
     font-size: clamp(3.15rem, 3.85vw, 4.3rem);
     line-height: 0.93;
+  }
+
+  .launch-heading-nowrap {
+    white-space: nowrap;
   }
 }
 

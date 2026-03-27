@@ -1895,13 +1895,7 @@ button:disabled {
 }
 
 .launch-blog-page .site-status-page {
-  color: rgba(19, 33, 44, 0.72);
-}
-
-.launch-blog-page .site-status-page .site-status-badge {
-  background: rgba(255, 248, 236, 0.88);
-  border-color: rgba(138, 96, 39, 0.24);
-  color: #8a6027;
+  display: none;
 }
 
 .launch-blog-page .inline-link {
@@ -1924,12 +1918,43 @@ button:disabled {
 }
 
 .article-shell {
-  padding-top: clamp(2.2rem, 4vw, 3.2rem);
+  padding-top: clamp(1.4rem, 3vw, 2.1rem);
 }
 
 .launch-article {
   max-width: 47rem;
   margin: 0 auto;
+}
+
+.launch-masthead {
+  padding: clamp(1.8rem, 4vw, 2.9rem) 0 clamp(2.1rem, 4.5vw, 3.3rem);
+}
+
+.launch-masthead-inner {
+  max-width: 47rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.launch-masthead .section-kicker {
+  margin-bottom: 0.95rem;
+}
+
+.launch-masthead h1 {
+  margin: 0;
+  max-width: 12ch;
+  color: #f8f4ed;
+  font-size: clamp(2.65rem, 5vw, 4.35rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.launch-standfirst {
+  max-width: 40rem;
+  margin: 1rem 0 0;
+  color: rgba(248, 244, 237, 0.8);
+  font-size: 1.08rem;
+  line-height: 1.78;
 }
 
 .launch-article-header {
@@ -1960,6 +1985,26 @@ button:disabled {
   margin-bottom: 0;
 }
 
+.launch-article-figure {
+  margin: 0 0 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(19, 33, 44, 0.12);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 68% 42%, rgba(245, 205, 113, 0.16), transparent 18%),
+    linear-gradient(180deg, #081018 0%, #101b25 100%);
+  box-shadow: 0 28px 64px rgba(6, 13, 21, 0.16);
+}
+
+.launch-article-image {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 34vw, 420px);
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 54%;
+}
+
 .launch-issue-list {
   margin: 0 0 1.2rem;
   padding-left: 1.5rem;
@@ -1978,7 +2023,7 @@ button:disabled {
   margin: 0;
 }
 
-.launch-article > p:first-child {
+.launch-article > p:first-of-type {
   color: #10202d;
   font-size: 1.14rem;
 }
@@ -2481,8 +2526,8 @@ button:disabled {
     line-height: 1.8;
   }
 
-  .launch-cover-band {
-    margin-top: 0.85rem;
+  .launch-masthead-inner {
+    max-width: 100%;
   }
 
   .chamber-hero-network {
@@ -2620,16 +2665,27 @@ button:disabled {
     width: 186%;
   }
 
-  .launch-cover-band {
+  .launch-masthead-inner {
     padding: 0 1rem;
   }
 
-  .launch-article-header h1 {
+  .launch-masthead h1 {
     max-width: 100%;
   }
 
   .launch-article h2 {
     margin-top: 2.25rem;
+  }
+
+  .launch-article-figure {
+    margin-bottom: 1.6rem;
+    border-radius: 18px;
+  }
+
+  .launch-article-image {
+    height: min(260px, 58vw);
+    max-height: 260px;
+    object-position: center 50%;
   }
 
   .chamber-hero-network {

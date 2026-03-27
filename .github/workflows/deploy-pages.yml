@@ -33,7 +33,6 @@ jobs:
           cp *.html _site/
           cp styles.css scripts.js signup-config.js _site/
           cp -R public _site/
-          cp -R openclaw-skill-pack _site/
           touch _site/.nojekyll
 
       - name: Upload Pages artifact

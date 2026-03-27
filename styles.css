@@ -1960,6 +1960,24 @@ button:disabled {
   margin-bottom: 0;
 }
 
+.launch-issue-list {
+  margin: 0 0 1.2rem;
+  padding-left: 1.5rem;
+}
+
+.launch-issue-list li {
+  margin-bottom: 1rem;
+  padding-left: 0.3rem;
+}
+
+.launch-issue-list li:last-child {
+  margin-bottom: 0;
+}
+
+.launch-issue-list p {
+  margin: 0;
+}
+
 .launch-article > p:first-child {
   color: #10202d;
   font-size: 1.14rem;

@@ -2075,6 +2075,10 @@ button.concept-locked-control,
   display: none;
 }
 
+.launch-blog-page .page-shell + .page-main > .section:first-child {
+  padding-top: 0;
+}
+
 .launch-blog-page .inline-link {
   color: #8f6226;
   text-decoration-color: rgba(143, 98, 38, 0.34);
@@ -2863,27 +2867,27 @@ button.concept-locked-control,
     max-width: 14ch;
   }
 
-  .home-page .topbar {
+  .topbar.has-mobile-nav {
     align-items: center;
     flex-direction: row;
     gap: 1rem;
     padding-top: 1.05rem;
   }
 
-  .home-page .topbar::after {
+  .topbar.has-mobile-nav::after {
     inset: auto 1rem 0;
   }
 
-  .home-page .brand {
+  .topbar.has-mobile-nav .brand {
     min-width: 0;
     flex: 1 1 auto;
   }
 
-  .home-page .brand span {
+  .topbar.has-mobile-nav .brand span {
     white-space: nowrap;
   }
 
-  .home-page .topbar.has-mobile-nav .nav-toggle {
+  .topbar.has-mobile-nav .nav-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2893,13 +2897,13 @@ button.concept-locked-control,
     font-size: 0.74rem;
   }
 
-  .home-page .nav-toggle[aria-expanded="true"] {
+  .nav-toggle[aria-expanded="true"] {
     border-color: rgba(201, 177, 136, 0.42);
     background: rgba(13, 24, 34, 0.9);
     color: var(--gold);
   }
 
-  .home-page .topbar.has-mobile-nav .nav-links {
+  .topbar.has-mobile-nav .nav-links {
     position: absolute;
     top: calc(100% + 0.75rem);
     left: 1rem;
@@ -2917,21 +2921,21 @@ button.concept-locked-control,
     transition: opacity 180ms ease, transform 180ms ease;
   }
 
-  .home-page .topbar.has-mobile-nav.is-menu-open .nav-links {
+  .topbar.has-mobile-nav.is-menu-open .nav-links {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
 
-  .home-page .nav-links a {
+  .topbar.has-mobile-nav .nav-links a {
     display: flex;
     align-items: center;
     min-height: 2.75rem;
     padding: 0.55rem 0.72rem;
   }
 
-  .home-page .nav-links a::after,
-  .home-page .nav-term-link::before {
+  .topbar.has-mobile-nav .nav-links a::after,
+  .topbar.has-mobile-nav .nav-term-link::before {
     display: none;
   }
 
@@ -3285,7 +3289,7 @@ button.concept-locked-control,
     width: 100%;
   }
 
-  .home-page .topbar {
+  .topbar.has-mobile-nav {
     padding-top: 0.9rem;
   }
 
@@ -3339,12 +3343,12 @@ button.concept-locked-control,
   .launch-point,
   .launch-track-step,
   .launch-signup-band .form-panel,
-  .home-page .nav-links {
+  .topbar.has-mobile-nav .nav-links {
     animation: none;
   }
 
-  .home-page .nav-links,
-  .home-page .nav-toggle {
+  .topbar.has-mobile-nav .nav-links,
+  .topbar.has-mobile-nav .nav-toggle {
     transition: none;
   }
 }

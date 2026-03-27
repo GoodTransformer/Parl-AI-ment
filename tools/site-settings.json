@@ -1,7 +1,7 @@
 {
   "site_url": "https://parl-ai-ment.org",
-  "styles_version": "20260327f",
-  "scripts_version": "20260327f",
+  "styles_version": "20260327g",
+  "scripts_version": "20260327g",
   "footer_links": [
     { "href": "how-it-works.html", "label": "How it Works" },
     { "href": "multi-owner-matters.html", "label": "Multi-Owner Matters" },

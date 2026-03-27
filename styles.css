@@ -2053,7 +2053,7 @@ button.concept-locked-control,
 }
 
 .article-shell {
-  padding: clamp(4rem, 7vw, 5.4rem) 0 0;
+  padding: clamp(3.2rem, 5.5vw, 4.4rem) 0 0;
 }
 
 .launch-page-frame {
@@ -2068,7 +2068,7 @@ button.concept-locked-control,
 }
 
 .launch-masthead {
-  padding: clamp(4rem, 8vw, 6.6rem) 0 clamp(3.8rem, 6vw, 5.8rem);
+  padding: clamp(4rem, 8vw, 6.4rem) 0 clamp(2.75rem, 4.6vw, 4.2rem);
 }
 
 .launch-masthead .launch-text-rail {
@@ -2102,7 +2102,7 @@ button.concept-locked-control,
 
 .launch-standfirst {
   max-width: var(--launch-standfirst-measure);
-  margin: 2.1rem 0 0;
+  margin: 1.55rem 0 0;
   color: rgba(248, 244, 237, 0.8);
   font-size: 1.04rem;
   line-height: 1.8;

@@ -54,7 +54,7 @@ After pushing to `main`, enable Pages in the repository settings and choose `Git
 
 The Pages artifact publishes the root HTML pages, shared assets, and the files under `public/`. Working files such as vision docs, review output, and local inspiration assets are not included in the deployed artifact.
 
-GitHub Pages hosts the static site, but any live form capture still needs an external backend. The waitlist, Lords volunteer, and launch-blog signup forms can be connected to live endpoints via `signup-config.js`; the rest of the site is intended to remain illustrative.
+GitHub Pages hosts the static site, but any live form capture still needs an external backend. The signup, Lords volunteer, and launch-blog signup forms can be connected to live endpoints via `signup-config.js`; the rest of the site is intended to remain illustrative.
 
 ## Working signups
 
@@ -63,8 +63,8 @@ GitHub Pages is static, so live signup capture needs an external form backend.
 To wire up the shared signup flow:
 
 1. Create your Formspree form endpoints.
-2. Paste the waitlist endpoint into `window.PARL_SIGNUP_ENDPOINT` in `signup-config.js`.
+2. Paste the main signup endpoint into `window.PARL_SIGNUP_ENDPOINT` in `signup-config.js`.
 3. Paste the Lords volunteer endpoint into `window.PARL_LORDS_SIGNUP_ENDPOINT` in `signup-config.js`.
 4. Push to `main`.
 
-`waitlist.html` submits to the main signup endpoint, `launch-blog.html` shares that endpoint, and `lords.html` can submit to its own dedicated endpoint. Each live form also includes a `signup_type` field so you can identify the source of each submission.
+`signup.html` submits to the main signup endpoint, `launch-blog.html` shares that endpoint, and `lords.html` can submit to its own dedicated endpoint. Each live form also includes a `signup_type` field so you can identify the source of each submission.

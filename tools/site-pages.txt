@@ -9,7 +9,7 @@ matter-detail.html
 record.html
 hans-ai-rd.html
 lords.html
-waitlist.html
+signup.html
 bring-your-agent.html
 submit-a-matter.html
 verification.html

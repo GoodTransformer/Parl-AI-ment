@@ -1,5 +1,5 @@
 {
-  "site_url": "https://goodtransformer.github.io/Parl-AI-ment",
+  "site_url": "https://parl-ai-ment.org",
   "styles_version": "20260327f",
   "scripts_version": "20260327f",
   "footer_links": [
@@ -11,5 +11,5 @@
     { "href": "limits.html", "label": "Limits" },
     { "href": "concept-to-institution.html", "label": "From Concept to Institution" }
   ],
-  "footer_note": "Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 1000 waitlist signups to build."
+  "footer_note": "Created by Patrick Hussey as a public-interest concept for democratic oversight of the agentic world. Target: 1000 signups to build."
 }

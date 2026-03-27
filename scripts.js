@@ -1,5 +1,5 @@
 const SITE_STATUS_HTML =
-  '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="waitlist.html#waitlist-form">1000 signups to build</a>';
+  '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="signup.html#signup-form">1000 signups to build</a>';
 
 const DEFAULT_CONCEPT_TOAST_MESSAGE =
   "That part of the site is illustrative only. Only the signup forms are live right now.";
@@ -29,11 +29,11 @@ const NAV_TERM_DEFINITIONS = {
 };
 
 const LIVE_SIGNUP_TARGETS = new Set([
-  "#waitlist-form",
+  "#signup-form",
   "#volunteer-form",
   "#launch-signup",
-  "waitlist.html",
-  "waitlist.html#waitlist-form",
+  "signup.html",
+  "signup.html#signup-form",
   "lords.html#volunteer-form",
   "launch-blog.html#launch-signup",
 ]);
@@ -504,7 +504,7 @@ const initConceptGuards = () => {
 
 const getSignupEndpoints = () => ({
   default: window.PARL_SIGNUP_ENDPOINT?.trim(),
-  waitlist: window.PARL_SIGNUP_ENDPOINT?.trim(),
+  signup: window.PARL_SIGNUP_ENDPOINT?.trim(),
   "launch-blog": window.PARL_SIGNUP_ENDPOINT?.trim(),
   "lords-volunteer": window.PARL_LORDS_SIGNUP_ENDPOINT?.trim() || window.PARL_SIGNUP_ENDPOINT?.trim(),
 });

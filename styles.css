@@ -928,7 +928,6 @@ main > .section + .section {
 
 .digest-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: start;
 }
 
 .card,
@@ -1989,7 +1988,7 @@ button.concept-locked-control,
 }
 
 .digest-card {
-  min-height: auto;
+  min-height: 100%;
 }
 
 .launch-blog-page {

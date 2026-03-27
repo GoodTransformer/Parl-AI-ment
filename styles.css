@@ -1773,6 +1773,10 @@ main > .section + .section {
   opacity: 0.92;
 }
 
+#signup-form-panel {
+  scroll-margin-top: 1.25rem;
+}
+
 input,
 textarea,
 select {

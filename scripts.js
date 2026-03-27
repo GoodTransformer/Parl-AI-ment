@@ -1,5 +1,5 @@
 const SITE_STATUS_HTML =
-  '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="signup.html#signup-form">1000 signups to build</a>';
+  '<span class="site-status-badge">Concept site</span><span>Proposed public system, not a live authority.</span><a class="inline-link" href="signup.html#signup-form-panel">1000 signups to build</a>';
 
 const DEFAULT_CONCEPT_TOAST_MESSAGE =
   "That part of the site is illustrative only. Only the signup forms are live right now.";
@@ -30,10 +30,12 @@ const NAV_TERM_DEFINITIONS = {
 
 const LIVE_SIGNUP_TARGETS = new Set([
   "#signup-form",
+  "#signup-form-panel",
   "#volunteer-form",
   "#launch-signup",
   "signup.html",
   "signup.html#signup-form",
+  "signup.html#signup-form-panel",
   "lords.html#volunteer-form",
   "launch-blog.html#launch-signup",
 ]);

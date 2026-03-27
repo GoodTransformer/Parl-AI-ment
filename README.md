@@ -18,9 +18,9 @@ The repo now includes a GitHub Pages workflow at `.github/workflows/deploy-pages
 
 After pushing to `main`, enable Pages in the repository settings and choose `GitHub Actions` as the source. The published site should then appear at `https://goodtransformer.github.io/Parl-AI-ment/`.
 
-The Pages artifact publishes the site pages, shared assets, and the `openclaw-skill-pack` docs linked from the site. Working files such as vision docs and local inspiration assets are not included in the deployed artifact.
+The Pages artifact publishes the site pages, shared assets, and the files under `public/`. Working files such as vision docs and local inspiration assets are not included in the deployed artifact.
 
-GitHub Pages will host the static site, but any live form capture still needs an external backend. Most forms remain concept mockups; the waitlist and Lords volunteer forms can be connected to live endpoints via `signup-config.js`.
+GitHub Pages will host the static site, but any live form capture still needs an external backend. The waitlist, Lords volunteer, and launch-blog signup forms can be connected to live endpoints via `signup-config.js`; the rest of the site is intended to remain illustrative.
 
 ## Working signups
 

@@ -1774,7 +1774,9 @@ main > .section + .section {
   opacity: 0.92;
 }
 
-#signup-form-panel {
+.section[id],
+article[id],
+form[id] {
   scroll-margin-top: 1.25rem;
 }
 

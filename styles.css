@@ -1964,26 +1964,19 @@ button.concept-locked-control,
 .launch-blog-page .page-shell {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    radial-gradient(circle at 82% 16%, rgba(201, 177, 136, 0.12), transparent 20%),
-    radial-gradient(circle at 14% 14%, rgba(93, 154, 175, 0.12), transparent 22%),
-    linear-gradient(180deg, #0e1d29 0%, #182b39 62%, #1d3241 100%);
-  box-shadow: inset 0 -70px 120px rgba(0, 0, 0, 0.2);
+    radial-gradient(circle at 78% 16%, rgba(201, 177, 136, 0.14), transparent 22%),
+    radial-gradient(circle at 18% 18%, rgba(77, 111, 129, 0.14), transparent 28%),
+    linear-gradient(180deg, #0a141d 0%, #111c27 54%, #192836 82%, rgba(235, 221, 200, 0.18) 100%);
+  box-shadow: inset 0 -84px 132px rgba(0, 0, 0, 0.18);
 }
 
 .launch-blog-page .topbar-solid {
-  background:
-    linear-gradient(180deg, rgba(8, 15, 22, 0.44), rgba(8, 15, 22, 0)),
-    transparent;
+  background: transparent;
+  backdrop-filter: none;
 }
 
 .launch-blog-page .topbar {
-  max-width: var(--launch-page-width);
-  padding-left: var(--launch-page-padding);
-  padding-right: var(--launch-page-padding);
-}
-
-.launch-blog-page .topbar::after {
-  inset: auto var(--launch-page-padding) 0;
+  max-width: var(--max-width);
 }
 
 .launch-blog-page .nav-links {

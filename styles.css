@@ -928,6 +928,7 @@ main > .section + .section {
 
 .digest-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
 }
 
 .card,
@@ -943,9 +944,17 @@ main > .section + .section {
 }
 
 .card,
-.digest-card,
 .timeline-step {
   padding: var(--space-card);
+}
+
+.digest-card {
+  display: grid;
+  align-self: start;
+  gap: 0.8rem;
+  height: auto;
+  min-height: 0;
+  padding: 1.55rem 1.55rem 1.4rem;
 }
 
 .card,
@@ -1985,10 +1994,6 @@ button.concept-locked-control,
 .join-steps {
   padding: 1.6rem 1.8rem 1.6rem 2.8rem;
   line-height: 1.75;
-}
-
-.digest-card {
-  min-height: 100%;
 }
 
 .launch-blog-page {

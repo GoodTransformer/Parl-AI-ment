@@ -41,6 +41,21 @@ const LIVE_SIGNUP_TARGETS = new Set([
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
 let conceptToastTimeout;
 
+const runAfterFirstPaint = (callback) => {
+  window.requestAnimationFrame(() => {
+    window.setTimeout(callback, 0);
+  });
+};
+
+const runWhenIdle = (callback, timeout = 1200) => {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(() => callback(), { timeout });
+    return;
+  }
+
+  window.setTimeout(callback, 160);
+};
+
 const normalizeInternalHref = (href) => href.split("?")[0].replace(/^\.\//, "");
 const isExternalHref = (href) => /^(https?:|mailto:|tel:)/i.test(href);
 
@@ -608,7 +623,13 @@ ensureMainSkipLink();
 syncSiteStatuses();
 enhancePrimaryNav();
 initMobileNav();
-initHeroMotionImages();
-initTabs();
-initConceptGuards();
-initSignupForms();
+
+runAfterFirstPaint(() => {
+  initHeroMotionImages();
+
+  runWhenIdle(() => {
+    initTabs();
+    initConceptGuards();
+    initSignupForms();
+  });
+});

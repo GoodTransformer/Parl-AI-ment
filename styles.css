@@ -108,6 +108,15 @@ img {
   max-width: 100%;
 }
 
+@supports (content-visibility: auto) {
+  .home-page main > .section:nth-of-type(n + 2),
+  body:not(.home-page) .page-main > .section:nth-of-type(n + 2),
+  .site-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 960px;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;

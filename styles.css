@@ -1937,9 +1937,10 @@ button.concept-locked-control,
 .launch-blog-page {
   --launch-page-width: 1200px;
   --launch-page-padding: clamp(1.25rem, 4vw, 3rem);
+  --launch-hero-width: 57rem;
   --launch-text-width: 47.5rem;
   --launch-body-measure: 72ch;
-  --launch-standfirst-measure: 34ch;
+  --launch-standfirst-measure: 37ch;
   color: #13212c;
   background:
     radial-gradient(circle at top left, rgba(201, 177, 136, 0.28), transparent 24%),
@@ -2063,29 +2064,34 @@ button.concept-locked-control,
 
 .launch-text-rail {
   width: min(100%, var(--launch-text-width));
+  margin-inline: auto;
 }
 
 .launch-masthead {
-  padding: clamp(3rem, 6vw, 5.4rem) 0 clamp(3rem, 5vw, 4.6rem);
+  padding: clamp(4rem, 8vw, 6.6rem) 0 clamp(3.8rem, 6vw, 5.8rem);
+}
+
+.launch-masthead .launch-text-rail {
+  width: min(100%, var(--launch-hero-width));
 }
 
 .launch-masthead .section-kicker {
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.65rem;
 }
 
 .launch-masthead h1 {
   margin: 0;
-  max-width: 13.25ch;
+  max-width: 16.2ch;
   color: #f8f4ed;
-  font-size: clamp(2.8rem, 4.75vw, 4.45rem);
-  line-height: 0.96;
+  font-size: clamp(2.8rem, 4.35vw, 4.2rem);
+  line-height: 0.95;
   letter-spacing: -0.035em;
   text-wrap: balance;
 }
 
 .launch-standfirst {
   max-width: var(--launch-standfirst-measure);
-  margin: 1.5rem 0 0;
+  margin: 1.95rem 0 0;
   color: rgba(248, 244, 237, 0.8);
   font-size: 1.06rem;
   line-height: 1.82;
@@ -2493,9 +2499,9 @@ button.concept-locked-control,
 
 @media (min-width: 1024px) {
   .launch-masthead h1 {
-    max-width: 12.8ch;
-    font-size: clamp(3.15rem, 4.2vw, 4.55rem);
-    line-height: 0.94;
+    max-width: 16.8ch;
+    font-size: clamp(3.2rem, 4vw, 4.4rem);
+    line-height: 0.93;
   }
 }
 

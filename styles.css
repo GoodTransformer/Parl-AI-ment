@@ -329,6 +329,14 @@ img {
   max-width: min(36rem, 100%);
 }
 
+.hero-copy h1 {
+  max-width: min(40rem, 100%);
+}
+
+.hero-copy > :not(h1) {
+  max-width: min(36rem, 100%);
+}
+
 .eyebrow,
 .section-kicker,
 .panel-label,

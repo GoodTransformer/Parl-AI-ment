@@ -198,75 +198,79 @@
 
             <h2>Who I am</h2>
             <p>I am Patrick Hussey (<a class="inline-link" href="https://x.com/PatrickRiot">X</a>). I run an ethical AI consultancy, which I am painfully aware is an oxymoron. I wrote <a class="inline-link" href="https://www.fastcompany.com/91092363/what-happens-when-the-ais-turn-on-each-other">this</a> 18 months ago and have been thinking about the agentic world ever since.</p>
-            <p>Though woefully under-skilled to build this myself, if <strong>1,000 people sign up</strong>, I’ll try to build it or find better people to hand it off to. This is a static concept site, vibe-coded. Nothing works apart from the sign-up form, though I have tried to think through the basic shape of it. The signups are just a signal that it or something like it is needed.</p>
+            <p>Though woefully under-skilled to build this myself, if <strong>1,000 people sign up</strong>, I’ll try to build it or find better people to hand it off to. This is a static concept site, vibe-coded. Nothing works apart from the sign-up form, though I have tried to think through the basic shape of it. The sign-ups are just a signal that it or something like it is needed.</p>
             <p>In the medium term, this should be a globally representative civic institution with no owners, just a useful layer for the common good.</p>
           </article>
         </div>
       </section>
 
       <section class="section launch-signup-band" id="launch-signup">
-        <form class="form-panel signup-form" data-signup-form data-signup-source="launch-blog" novalidate>
-          <div class="section-heading section-heading-compact">
-            <p class="section-kicker">Sign up</p>
-            <h2>Sign up if you think something like this should exist.</h2>
-            <p class="section-caption">The signups are just a signal that it or something like it is needed.</p>
+        <div class="launch-page-frame">
+          <div class="launch-text-rail">
+            <form class="form-panel signup-form" data-signup-form data-signup-source="launch-blog" novalidate>
+              <div class="section-heading section-heading-compact">
+                <p class="section-kicker">Sign up</p>
+                <h2>Sign up if you think something like this should exist.</h2>
+                <p class="section-caption">The sign-ups are just a signal that it or something like it is needed.</p>
+              </div>
+              <input type="hidden" name="signup_type" value="launch-blog" />
+              <div class="form-grid">
+                <label class="form-field">
+                  <span class="field-label">Name</span>
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Alex Morgan"
+                    required
+                  />
+                </label>
+                <label class="form-field">
+                  <span class="field-label">Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="alex@example.com"
+                    required
+                  />
+                </label>
+                <label class="form-field">
+                  <span class="field-label">Role or perspective</span>
+                  <input
+                    type="text"
+                    name="role_or_perspective"
+                    autocomplete="organization-title"
+                    placeholder="Operator, builder, policymaker, researcher, public-interest supporter"
+                  />
+                </label>
+                <label class="form-field">
+                  <span class="field-label">Country or jurisdiction</span>
+                  <input
+                    type="text"
+                    name="country_or_jurisdiction"
+                    autocomplete="country-name"
+                    placeholder="United Kingdom"
+                  />
+                </label>
+                <label class="form-field-wide">
+                  <span class="field-label">Why are you signing up?</span>
+                  <textarea
+                    name="launch_reason"
+                    placeholder="I want a public-interest institution that can hold recurring agentic failures, disputes, and governance gaps that do not fit inside one company narrative."
+                  ></textarea>
+                </label>
+              </div>
+              <div class="page-actions page-actions-spaced">
+                <button class="button button-primary" type="submit">Sign up</button>
+              </div>
+              <p class="form-helper">
+                You will only be contacted about Parl-AI-ment.
+              </p>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
           </div>
-          <input type="hidden" name="signup_type" value="launch-blog" />
-          <div class="form-grid">
-            <label class="form-field">
-              <span class="field-label">Name</span>
-              <input
-                type="text"
-                name="name"
-                autocomplete="name"
-                placeholder="Alex Morgan"
-                required
-              />
-            </label>
-            <label class="form-field">
-              <span class="field-label">Email</span>
-              <input
-                type="email"
-                name="email"
-                autocomplete="email"
-                placeholder="alex@example.com"
-                required
-              />
-            </label>
-            <label class="form-field">
-              <span class="field-label">Role or perspective</span>
-              <input
-                type="text"
-                name="role_or_perspective"
-                autocomplete="organization-title"
-                placeholder="Operator, builder, policymaker, researcher, public-interest supporter"
-              />
-            </label>
-            <label class="form-field">
-              <span class="field-label">Country or jurisdiction</span>
-              <input
-                type="text"
-                name="country_or_jurisdiction"
-                autocomplete="country-name"
-                placeholder="United Kingdom"
-              />
-            </label>
-            <label class="form-field-wide">
-              <span class="field-label">Why are you signing up?</span>
-              <textarea
-                name="launch_reason"
-                placeholder="I want a public-interest institution that can hold recurring agentic failures, disputes, and governance gaps that do not fit inside one company narrative."
-              ></textarea>
-            </label>
-          </div>
-          <div class="page-actions page-actions-spaced">
-            <button class="button button-primary" type="submit">Sign up</button>
-          </div>
-          <p class="form-helper">
-            You will only be contacted about Parl-AI-ment.
-          </p>
-          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        </form>
+        </div>
       </section>
     </main>
 

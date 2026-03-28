@@ -2532,11 +2532,17 @@ button.concept-locked-control,
 
 .launch-signup-band {
   padding-top: clamp(2.4rem, 4.2vw, 3.6rem);
+  padding-inline: 0;
 }
 
 .launch-signup-band .signup-form {
-  max-width: 47rem;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.launch-signup-band .launch-text-rail {
+  width: min(100%, var(--launch-text-width));
 }
 
 .launch-signup-band .form-panel {

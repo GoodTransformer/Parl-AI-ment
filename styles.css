@@ -1999,7 +1999,7 @@ button.concept-locked-control,
 .launch-blog-page {
   --launch-page-width: 1200px;
   --launch-page-padding: clamp(1.25rem, 4vw, 3rem);
-  --launch-text-width: 47.5rem;
+  --launch-text-width: 52rem;
   --launch-body-measure: 72ch;
   --launch-standfirst-measure: 56ch;
   --launch-subhead-measure: 24ch;
@@ -2154,6 +2154,16 @@ button.concept-locked-control,
   line-height: 1.8;
   text-align: left;
   text-wrap: pretty;
+}
+
+.launch-standfirst-line {
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .launch-standfirst-line:first-child {
+    white-space: nowrap;
+  }
 }
 
 .launch-origin-note {

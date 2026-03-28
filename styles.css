@@ -2114,7 +2114,7 @@ button.concept-locked-control,
 }
 
 .launch-masthead {
-  padding: clamp(4rem, 8vw, 6.4rem) 0 clamp(2.75rem, 4.6vw, 4.2rem);
+  padding: clamp(3.5rem, 7vw, 5.7rem) 0 clamp(2.35rem, 4vw, 3.6rem);
 }
 
 .launch-masthead .launch-text-rail {
@@ -2182,7 +2182,7 @@ button.concept-locked-control,
 
 .launch-article h2 {
   max-width: var(--launch-subhead-measure);
-  margin: 3.9rem 0 1.3rem;
+  margin: 3.3rem 0 1.05rem;
   font-size: clamp(1.58rem, 2.1vw, 2rem);
   line-height: 1.16;
   letter-spacing: -0.022em;
@@ -2521,7 +2521,7 @@ button.concept-locked-control,
 }
 
 .launch-signup-band {
-  padding-top: clamp(3rem, 5vw, 4.4rem);
+  padding-top: clamp(2.4rem, 4.2vw, 3.6rem);
 }
 
 .launch-signup-band .signup-form {
